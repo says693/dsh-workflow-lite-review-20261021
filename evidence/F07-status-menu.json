@@ -1,0 +1,154 @@
+{
+  "test": "status-menu-vertical-placement",
+  "injectedErrors": false,
+  "cases": [
+    {
+      "label": "center-control",
+      "root": {
+        "x": 280,
+        "y": 76,
+        "width": 1153,
+        "bottom": 900
+      },
+      "menu": {
+        "x": 424.5,
+        "y": 466,
+        "width": 220,
+        "height": 261,
+        "bottom": 727
+      },
+      "items": [
+        {
+          "text": "待执行",
+          "status": "pending",
+          "y": 471,
+          "bottom": 505,
+          "hit": true
+        },
+        {
+          "text": "执行中",
+          "status": "running",
+          "y": 504.99908447265625,
+          "bottom": 538.9990844726562,
+          "hit": true
+        },
+        {
+          "text": "等待用户",
+          "status": "waiting",
+          "y": 538.9935913085938,
+          "bottom": 572.9935913085938,
+          "hit": true
+        },
+        {
+          "text": "完成",
+          "status": "done",
+          "y": 572.9817504882812,
+          "bottom": 606.9817504882812,
+          "hit": true
+        },
+        {
+          "text": "失败",
+          "status": "failed",
+          "y": 606.9612426757812,
+          "bottom": 640.9612426757812,
+          "hit": true
+        },
+        {
+          "text": "跳过",
+          "status": "skipped",
+          "y": 640.9287719726562,
+          "bottom": 674.9287719726562,
+          "hit": true
+        },
+        {
+          "text": "设为下一步",
+          "y": 687.8040771484375,
+          "bottom": 721.8040771484375,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "label": "near-bottom",
+      "root": {
+        "x": 280,
+        "y": 76,
+        "width": 1153,
+        "bottom": 900
+      },
+      "menu": {
+        "x": 424.5,
+        "y": 773,
+        "width": 220,
+        "height": 261,
+        "bottom": 1034
+      },
+      "items": [
+        {
+          "text": "待执行",
+          "status": "pending",
+          "y": 778,
+          "bottom": 812,
+          "hit": true
+        },
+        {
+          "text": "执行中",
+          "status": "running",
+          "y": 811.9998168945312,
+          "bottom": 845.9998168945312,
+          "hit": true
+        },
+        {
+          "text": "等待用户",
+          "status": "waiting",
+          "y": 845.9961547851562,
+          "bottom": 879.9961547851562,
+          "hit": true
+        },
+        {
+          "text": "完成",
+          "status": "done",
+          "y": 879.9867553710938,
+          "bottom": 913.9867553710938,
+          "hit": true
+        },
+        {
+          "text": "失败",
+          "status": "failed",
+          "y": 913.9695434570312,
+          "bottom": 947.9695434570312,
+          "hit": false
+        },
+        {
+          "text": "跳过",
+          "status": "skipped",
+          "y": 947.9417724609375,
+          "bottom": 981.9417724609375,
+          "hit": false
+        },
+        {
+          "text": "设为下一步",
+          "y": 994.833984375,
+          "bottom": 1028.833984375,
+          "hit": false
+        }
+      ]
+    }
+  ],
+  "instance": {
+    "id": "20261021-161345-8201",
+    "workflow": "deep-menu-layout",
+    "planId": "8db32649",
+    "mode": "auto",
+    "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+    "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161345-8201\\state.yaml",
+    "session": "session-hero-shots",
+    "createdAt": 1792570425338,
+    "current": true,
+    "status": "pending",
+    "done": 0,
+    "total": 2,
+    "updatedAt": "2026-10-21T16:13:45.329+08:00"
+  },
+  "confirmed": true
+}

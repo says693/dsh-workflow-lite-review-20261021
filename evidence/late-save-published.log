@@ -1,0 +1,10 @@
+{
+  "confirmed": true,
+  "switchedAfterMs": 2425,
+  "status": "已保存",
+  "aHash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+  "bOriginalHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+  "bSentHash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+  "controlPreservedExternalPrompt": true,
+  "raceLostExternalPrompt": true
+}

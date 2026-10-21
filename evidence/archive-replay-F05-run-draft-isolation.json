@@ -1,0 +1,1206 @@
+{
+  "test": "run-draft-isolation",
+  "injectedErrors": false,
+  "rpc": [
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "65b06c73-f7aa-4e52-8802-8048702a104e",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "65b06c73-f7aa-4e52-8802-8048702a104e",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.505+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "f0cbd155-7e2c-43d2-8125-6599094df2ec",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "f0cbd155-7e2c-43d2-8125-6599094df2ec",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "planId": "12212251",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570940514,
+              "current": true,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:22:20.505+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-162220-2d5f/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "plan": "12212251",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-2d5f\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:22:20.505+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570940508.0037,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "3e545ce6-e158-4bef-bf06-550295cab3aa",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "3e545ce6-e158-4bef-bf06-550295cab3aa",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.505+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "725785e3-4888-4eed-8d4b-0c3366472a69",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots",
+          "since": 1792570940508.0037
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "725785e3-4888-4eed-8d4b-0c3366472a69",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570940508.0037
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "7a0e6ad5-5171-4c1d-8395-042f05651f89",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "7a0e6ad5-5171-4c1d-8395-042f05651f89",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.505+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "f6a5044e-dc0b-42c4-b6ce-5afa432e4986",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots",
+          "since": 1792570940508.0037
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "f6a5044e-dc0b-42c4-b6ce-5afa432e4986",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570940508.0037
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "c6005961-0704-4b0b-a78a-542b54a5ce41",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-f8f0",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "c6005961-0704-4b0b-a78a-542b54a5ce41",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-162220-f8f0",
+              "workflow": "deep-draft-A",
+              "planId": "748b9453",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570940402,
+              "current": false,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:22:20.389+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-162220-f8f0/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-162220-f8f0",
+              "workflow": "deep-draft-A",
+              "plan": "748b9453",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-f8f0\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:22:20.389+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570940395.834,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "6a1fea74-dd3e-40a7-86c2-ceab7b4906ce",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "6a1fea74-dd3e-40a7-86c2-ceab7b4906ce",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.505+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "35ea5a68-72bd-4247-9ec1-29cc016fe9d7",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-f8f0",
+          "session": "session-hero-shots",
+          "since": 1792570940395.834
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "35ea5a68-72bd-4247-9ec1-29cc016fe9d7",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570940395.834
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "5626da81-e9f5-4919-926d-679323257b2f",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "5626da81-e9f5-4919-926d-679323257b2f",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "planId": "12212251",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570940514,
+              "current": true,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:22:20.505+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-162220-2d5f/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "plan": "12212251",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-2d5f\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:22:20.505+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570940508.0037,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "62123d2c-d100-4131-b817-45bdba8dc2fb",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "62123d2c-d100-4131-b817-45bdba8dc2fb",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.505+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/save",
+      "request": {
+        "type": "client-request",
+        "rpcId": "e681dfb9-c3c7-4b26-a5d9-9adf577fa5f4",
+        "method": "workflow-lite/run/save",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots",
+          "edits": [
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "status"
+              ],
+              "from": "pending",
+              "to": "failed"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "round"
+              ],
+              "from": null,
+              "to": 1
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "finishedAt"
+              ],
+              "from": null,
+              "to": "2026-10-21T16:22:24.171+08:00"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "error"
+              ],
+              "from": null,
+              "to": "用户标记为失败"
+            },
+            {
+              "path": [
+                "nodes",
+                "start",
+                "status"
+              ],
+              "from": "pending",
+              "to": "skipped"
+            }
+          ],
+          "note": "仅属于A的草稿说明",
+          "notify": false
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "e681dfb9-c3c7-4b26-a5d9-9adf577fa5f4",
+        "result": {
+          "ok": true,
+          "value": {
+            "notified": false,
+            "mtime": 1792570949321.3787,
+            "quiet": true
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "d75f3890-7042-4f2f-951d-947cb6b91433",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "d75f3890-7042-4f2f-951d-947cb6b91433",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "planId": "12212251",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570940514,
+              "current": true,
+              "status": "pending",
+              "done": 1,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:22:29.317+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-162220-2d5f/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-162220-2d5f",
+              "workflow": "deep-draft-B",
+              "plan": "12212251",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-2d5f\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:22:29.317+08:00",
+              "nodes": {
+                "start": {
+                  "status": "skipped"
+                },
+                "finish": {
+                  "status": "failed",
+                  "round": 1,
+                  "finishedAt": "2026-10-21T16:22:24.171+08:00",
+                  "error": "用户标记为失败"
+                }
+              },
+              "log": [
+                {
+                  "at": "2026-10-21T16:22:29.317+08:00",
+                  "node": "finish",
+                  "event": "edit",
+                  "round": 1,
+                  "detail": "status 从 pending 改成 failed；round 写成 1；finishedAt 写成 2026-10-21T16:22:24.171+08:00；error 写成 用户标记为失败",
+                  "by": "user"
+                },
+                {
+                  "at": "2026-10-21T16:22:29.317+08:00",
+                  "node": "start",
+                  "event": "edit",
+                  "detail": "status 从 pending 改成 skipped（这一步不再执行）。说明：仅属于A的草稿说明",
+                  "by": "user"
+                }
+              ]
+            },
+            "issues": [],
+            "mtime": 1792570949321.3787,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "2e6fc6b7-a932-4d8c-ac8d-cdce87b44737",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "2e6fc6b7-a932-4d8c-ac8d-cdce87b44737",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-162220-2d5f",
+                "workflow": "deep-draft-B",
+                "planId": "12212251",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940514,
+                "current": true,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:29.317+08:00"
+              },
+              {
+                "id": "20261021-162220-f8f0",
+                "workflow": "deep-draft-A",
+                "planId": "748b9453",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570940402,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:22:20.389+08:00"
+              }
+            ],
+            "current": "20261021-162220-2d5f"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "862ff685-5460-4490-9a63-7171f7bfa891",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-162220-2d5f",
+          "session": "session-hero-shots",
+          "since": 1792570949321.3787
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "862ff685-5460-4490-9a63-7171f7bfa891",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570949321.3787
+          }
+        }
+      }
+    }
+  ],
+  "instances": {
+    "a": {
+      "id": "20261021-162220-f8f0",
+      "workflow": "deep-draft-A",
+      "planId": "748b9453",
+      "mode": "auto",
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+      "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-f8f0\\state.yaml",
+      "session": "session-hero-shots",
+      "createdAt": 1792570940402,
+      "current": true,
+      "status": "pending",
+      "done": 0,
+      "total": 2,
+      "updatedAt": "2026-10-21T16:22:20.389+08:00"
+    },
+    "b": {
+      "id": "20261021-162220-2d5f",
+      "workflow": "deep-draft-B",
+      "planId": "12212251",
+      "mode": "auto",
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace",
+      "statePath": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\synthetic-workspace\\.workflow-lite\\runs\\20261021-162220-2d5f\\state.yaml",
+      "session": "session-hero-shots",
+      "createdAt": 1792570940514,
+      "current": true,
+      "status": "pending",
+      "done": 0,
+      "total": 2,
+      "updatedAt": "2026-10-21T16:22:20.505+08:00"
+    }
+  },
+  "bBefore": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:22:24.171+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      }
+    ],
+    "note": "仅属于B的草稿说明"
+  },
+  "aOnFirstOpen": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:22:24.171+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      }
+    ],
+    "note": "仅属于B的草稿说明"
+  },
+  "aBeforeSwitch": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:22:24.171+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      },
+      {
+        "path": [
+          "nodes",
+          "start",
+          "status"
+        ],
+        "from": "pending",
+        "to": "skipped"
+      }
+    ],
+    "note": "仅属于A的草稿说明"
+  },
+  "bAfterSwitch": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:22:24.171+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      },
+      {
+        "path": [
+          "nodes",
+          "start",
+          "status"
+        ],
+        "from": "pending",
+        "to": "skipped"
+      }
+    ],
+    "note": "仅属于A的草稿说明"
+  },
+  "noteInB": "仅属于A的草稿说明",
+  "bStateBefore": {
+    "version": 1,
+    "instance": "20261021-162220-2d5f",
+    "workflow": "deep-draft-B",
+    "plan": "12212251",
+    "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-2d5f\\graph.json",
+    "mode": "auto",
+    "status": "pending",
+    "updatedAt": "2026-10-21T16:22:20.505+08:00",
+    "nodes": {
+      "start": {
+        "status": "pending"
+      },
+      "finish": {
+        "status": "pending"
+      }
+    },
+    "log": []
+  },
+  "bStateAfter": {
+    "version": 1,
+    "instance": "20261021-162220-2d5f",
+    "workflow": "deep-draft-B",
+    "plan": "12212251",
+    "graph": "<REVIEW_ROOT>\\publication-20261021\\zip-clean-replay\\scripts\\data\\runs\\20261021-162220-2d5f\\graph.json",
+    "mode": "auto",
+    "status": "pending",
+    "updatedAt": "2026-10-21T16:22:29.317+08:00",
+    "nodes": {
+      "start": {
+        "status": "skipped"
+      },
+      "finish": {
+        "status": "failed",
+        "round": 1,
+        "finishedAt": "2026-10-21T16:22:24.171+08:00",
+        "error": "用户标记为失败"
+      }
+    },
+    "log": [
+      {
+        "at": "2026-10-21T16:22:29.317+08:00",
+        "node": "finish",
+        "event": "edit",
+        "round": 1,
+        "detail": "status 从 pending 改成 failed；round 写成 1；finishedAt 写成 2026-10-21T16:22:24.171+08:00；error 写成 用户标记为失败",
+        "by": "user"
+      },
+      {
+        "at": "2026-10-21T16:22:29.317+08:00",
+        "node": "start",
+        "event": "edit",
+        "detail": "status 从 pending 改成 skipped（这一步不再执行）。说明：仅属于A的草稿说明",
+        "by": "user"
+      }
+    ]
+  },
+  "chipBeforeSave": "skipped",
+  "confirmed": true
+}

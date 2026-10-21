@@ -1,0 +1,137 @@
+{
+  "confirmed": true,
+  "cases": [
+    {
+      "label": "center-control",
+      "root": {
+        "x": 280,
+        "y": 76,
+        "width": 1153,
+        "bottom": 900
+      },
+      "menu": {
+        "x": 424.5,
+        "y": 466,
+        "width": 220,
+        "height": 261,
+        "bottom": 727
+      },
+      "items": [
+        {
+          "text": "待执行",
+          "status": "pending",
+          "y": 471,
+          "bottom": 505,
+          "hit": true
+        },
+        {
+          "text": "执行中",
+          "status": "running",
+          "y": 504.99981689453125,
+          "bottom": 538.9998168945312,
+          "hit": true
+        },
+        {
+          "text": "等待用户",
+          "status": "waiting",
+          "y": 538.9961547851562,
+          "bottom": 572.9961547851562,
+          "hit": true
+        },
+        {
+          "text": "完成",
+          "status": "done",
+          "y": 572.9867553710938,
+          "bottom": 606.9867553710938,
+          "hit": true
+        },
+        {
+          "text": "失败",
+          "status": "failed",
+          "y": 606.9696044921875,
+          "bottom": 640.9696044921875,
+          "hit": true
+        },
+        {
+          "text": "跳过",
+          "status": "skipped",
+          "y": 640.9418334960938,
+          "bottom": 674.9418334960938,
+          "hit": true
+        },
+        {
+          "text": "设为下一步",
+          "y": 687.8341674804688,
+          "bottom": 721.8341674804688,
+          "hit": true
+        }
+      ]
+    },
+    {
+      "label": "near-bottom",
+      "root": {
+        "x": 280,
+        "y": 76,
+        "width": 1153,
+        "bottom": 900
+      },
+      "menu": {
+        "x": 424.5,
+        "y": 773,
+        "width": 220,
+        "height": 261,
+        "bottom": 1034
+      },
+      "items": [
+        {
+          "text": "待执行",
+          "status": "pending",
+          "y": 778,
+          "bottom": 812,
+          "hit": true
+        },
+        {
+          "text": "执行中",
+          "status": "running",
+          "y": 811.9990844726562,
+          "bottom": 845.9990844726562,
+          "hit": true
+        },
+        {
+          "text": "等待用户",
+          "status": "waiting",
+          "y": 845.9935302734375,
+          "bottom": 879.9935302734375,
+          "hit": true
+        },
+        {
+          "text": "完成",
+          "status": "done",
+          "y": 879.9816284179688,
+          "bottom": 913.9816284179688,
+          "hit": true
+        },
+        {
+          "text": "失败",
+          "status": "failed",
+          "y": 913.9610595703125,
+          "bottom": 947.9610595703125,
+          "hit": false
+        },
+        {
+          "text": "跳过",
+          "status": "skipped",
+          "y": 947.9285278320312,
+          "bottom": 981.9285278320312,
+          "hit": false
+        },
+        {
+          "text": "设为下一步",
+          "y": 994.8035888671875,
+          "bottom": 1028.8035888671875,
+          "hit": false
+        }
+      ]
+    }
+  ]
+}

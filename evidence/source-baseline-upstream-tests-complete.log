@@ -1,0 +1,75 @@
+
+> @xiaoso/dsh-workflow-lite@0.6.0 test
+> vitest run
+
+
+ RUN  v2.1.8 <REVIEW_ROOT>/repo
+
+ ✓ tests/host/store/merge.spec.ts (20 tests) 8ms
+ ✓ tests/shared/model.spec.ts (34 tests) 11ms
+ ✓ tests/shared/runCursor.spec.ts (15 tests) 17ms
+ ✓ tests/shared/resources.spec.ts (15 tests) 20ms
+ ✓ tests/client/editor.spec.ts (32 tests) 23ms
+ ✓ tests/shared/inputs.spec.ts (28 tests) 35ms
+ ✓ tests/shared/compile.spec.ts (77 tests) 51ms
+ ✓ tests/package.spec.ts (17 tests) 488ms
+   ✓ 第三方声明 > 与构建产物对得上（跑生成器的 --check） 458ms
+ ✓ tests/shared/graph.spec.ts (24 tests) 14ms
+ ✓ tests/client/route.spec.ts (14 tests) 26ms
+ ✓ tests/shared/runState.spec.ts (16 tests) 13ms
+ ✓ tests/shared/graphDiff.spec.ts (7 tests) 11ms
+ ✓ tests/shared/dialect.spec.ts (19 tests) 38ms
+ ✓ tests/client/layout.spec.ts (16 tests) 832ms
+   ✓ tidy > 按执行批次从左到右分列，列距整齐，卡片互不重叠，也不落在原点哨兵上 492ms
+ ✓ tests/client/themes.spec.ts (25 tests) 26ms
+ ✓ tests/shared/naming.spec.ts (22 tests) 10ms
+ ✓ tests/client/library.spec.ts (10 tests) 23ms
+ ✓ tests/host/hostFs.spec.ts (6 tests) 125ms
+ ✓ tests/client/imageView.spec.ts (12 tests) 9ms
+ ✓ tests/client/resources.spec.ts (9 tests) 442ms
+   ✓ 资源卡的高度 > 整理布局：一个步骤下面挂好几张高矮不一的资源卡，彼此不压 419ms
+ ✓ tests/shared/wire.spec.ts (98 tests) 23ms
+ ✓ tests/host/skillExport.spec.ts (7 tests) 1093ms
+   ✓ 导出成 skill > 装到本机：写进 skillsRoot；已经有了要明说覆盖 346ms
+ ✓ tests/host/store/versions.spec.ts (11 tests) 862ms
+   ✓ 存版本 > 最多 100 个 510ms
+ ✓ tests/client/pack.spec.ts (6 tests) 258ms
+ ✓ tests/host/store/repository.spec.ts (50 tests) 1588ms
+ ✓ tests/host/plan.spec.ts (10 tests) 1427ms
+ ✓ tests/host/tool.spec.ts (34 tests) 1449ms
+ ✓ tests/shared/outputPaths.spec.ts (13 tests) 9ms
+ ✓ tests/host/store/materialize.spec.ts (9 tests) 258ms
+ ✓ tests/client/nudge.spec.ts (7 tests) 9ms
+ ✓ tests/host/pluginConfig.spec.ts (13 tests) 11ms
+ ✓ tests/host/store/paths.spec.ts (10 tests) 132ms
+ ✓ tests/client/connect.spec.ts (4 tests) 6ms
+ ✓ tests/host/pack.spec.ts (19 tests) 1810ms
+   ✓ 并入已有工作流 > 内容一样的版本不再存，其余接着编号；不自动存本机现在的内容 323ms
+ ✓ tests/client/hubRuns.spec.ts (8 tests) 10ms
+ ✓ tests/client/htmlPreview.spec.ts (9 tests) 9ms
+ ✓ tests/client/runDraft.spec.ts (5 tests) 7ms
+ ✓ tests/client/folderBrowse.spec.ts (8 tests) 8ms
+ ✓ tests/client/runGraph.spec.ts (4 tests) 9ms
+ ✓ tests/host/store/atomic.spec.ts (11 tests) 100ms
+ ✓ tests/client/sessions.spec.ts (3 tests) 7ms
+ ✓ tests/host/skillView.spec.ts (3 tests) 7ms
+ ✓ tests/client/runHistory.spec.ts (6 tests) 7ms
+ ✓ tests/client/desktop.spec.ts (4 tests) 8ms
+ ✓ tests/shared/skillPack.spec.ts (6 tests) 6ms
+ ✓ tests/client/pathSample.spec.ts (7 tests) 10ms
+ ✓ tests/client/switcherSearch.spec.ts (7 tests) 7ms
+ ✓ tests/client/fileKind.spec.ts (23 tests) 6ms
+ ✓ tests/client/viewport.spec.ts (2 tests) 6ms
+ ✓ tests/client/hostPath.spec.ts (3 tests) 5ms
+ ✓ tests/client/pluginConfig.spec.ts (5 tests) 5ms
+ ✓ tests/client/nodeName.spec.ts (6 tests) 6ms
+ ✓ tests/client/markdown.spec.ts (14 tests) 38ms
+ ✓ tests/host/storage.spec.ts (2 tests) 39ms
+ ✓ tests/host/runs.spec.ts (43 tests) 5751ms
+   ✓ 编译建实例 > 实例开始之后再编译：建新的 496ms
+
+ Test Files  55 passed (55)
+      Tests  888 passed (888)
+   Start at  14:10:25
+   Duration  7.38s (transform 6.80s, setup 0ms, collect 16.82s, tests 17.21s, environment 12ms, prepare 9.81s)
+

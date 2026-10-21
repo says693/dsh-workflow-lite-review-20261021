@@ -1,0 +1,442 @@
+{
+  "kind": "real-host-successful-save-with-deliberately-delayed-response",
+  "switchedAfterMs": 2503,
+  "held": [
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "88f9beaa-30dd-43d2-b825-c89c3faff9e7",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-late-A",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "A-保存中的修改",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "88f9beaa-30dd-43d2-b825-c89c3faff9e7",
+        "result": {
+          "ok": true,
+          "value": {
+            "hash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+            "warnings": [],
+            "conflictIds": []
+          }
+        }
+      },
+      "at": 1792570385864
+    }
+  ],
+  "events": [
+    {
+      "at": 1792570382336,
+      "request": {
+        "type": "client-request",
+        "rpcId": "cbc93be4-95b5-46a2-86d5-319deb3a507a",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-late-control",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "B-后续独立修改",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "body": {
+        "type": "server-response",
+        "rpcId": "cbc93be4-95b5-46a2-86d5-319deb3a507a",
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "conflict",
+            "message": "写前比对发现以下 id 双方都改过：start",
+            "details": {
+              "ids": [
+                "start"
+              ],
+              "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+              "diskHash": "12586b73339e2186df7ef32d35f52a6a461f557381174fb7429b8b1832c01e80"
+            }
+          }
+        }
+      }
+    },
+    {
+      "at": 1792570383920,
+      "request": {
+        "type": "client-request",
+        "rpcId": "5c9db44c-18d0-460f-8c1d-f895e753fb4f",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-late-control",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "B-后续独立修改",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "body": {
+        "type": "server-response",
+        "rpcId": "5c9db44c-18d0-460f-8c1d-f895e753fb4f",
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "conflict",
+            "message": "写前比对发现以下 id 双方都改过：start",
+            "details": {
+              "ids": [
+                "start"
+              ],
+              "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+              "diskHash": "12586b73339e2186df7ef32d35f52a6a461f557381174fb7429b8b1832c01e80"
+            }
+          }
+        }
+      }
+    },
+    {
+      "at": 1792570388376,
+      "request": {
+        "type": "client-request",
+        "rpcId": "88f9beaa-30dd-43d2-b825-c89c3faff9e7",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-late-A",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "A-保存中的修改",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "body": {
+        "type": "server-response",
+        "rpcId": "88f9beaa-30dd-43d2-b825-c89c3faff9e7",
+        "result": {
+          "ok": true,
+          "value": {
+            "hash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+            "warnings": [],
+            "conflictIds": []
+          }
+        }
+      }
+    },
+    {
+      "at": 1792570389831,
+      "request": {
+        "type": "client-request",
+        "rpcId": "5cb983ba-5cfe-44eb-97bb-a53d0ec0a678",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-late-B",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "B-后续独立修改",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0"
+        }
+      },
+      "body": {
+        "type": "server-response",
+        "rpcId": "5cb983ba-5cfe-44eb-97bb-a53d0ec0a678",
+        "result": {
+          "ok": true,
+          "value": {
+            "hash": "c9fda67f8b14ba5b1361bfe3ce23cb3a66c7d05fb228b3b32ee8a1c8979dda16",
+            "warnings": [],
+            "conflictIds": []
+          }
+        }
+      }
+    }
+  ],
+  "status": "已保存",
+  "bOriginalHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+  "aReturnedHash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+  "bSentHash": "722998122fc62723d1d8e59627222e819fd9ff4cdfaec2e38e8ad1396d050dd0",
+  "bDiskAfter": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "wfNode",
+        "position": {
+          "x": 180,
+          "y": 180
+        },
+        "data": {
+          "label": "B-后续独立修改",
+          "prompt": "请输出一句复核结果。"
+        }
+      },
+      {
+        "id": "finish",
+        "type": "wfNode",
+        "position": {
+          "x": 600,
+          "y": 180
+        },
+        "data": {
+          "label": "复核结束",
+          "prompt": "核对前一步并总结。"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "start->finish",
+        "source": "start",
+        "target": "finish",
+        "sourceHandle": null,
+        "targetHandle": null
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "newerPrompt": "B-第二编辑者的最新提示词-不得被静默覆盖",
+  "controlAfter": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "wfNode",
+        "position": {
+          "x": 180,
+          "y": 180
+        },
+        "data": {
+          "label": "初始步骤",
+          "prompt": "B-第二编辑者的最新提示词-不得被静默覆盖"
+        }
+      },
+      {
+        "id": "finish",
+        "type": "wfNode",
+        "position": {
+          "x": 600,
+          "y": 180
+        },
+        "data": {
+          "label": "复核结束",
+          "prompt": "核对前一步并总结。"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "start->finish",
+        "source": "start",
+        "target": "finish",
+        "sourceHandle": null,
+        "targetHandle": null
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "controlPreservedExternalPrompt": true,
+  "raceLostExternalPrompt": true,
+  "confirmed": true
+}

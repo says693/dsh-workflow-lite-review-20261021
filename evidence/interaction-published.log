@@ -1,0 +1,12 @@
+[
+  {
+    "id": "F01",
+    "confirmed": true,
+    "name": "plan-dialog-delete-reaches-canvas"
+  },
+  {
+    "id": "F02",
+    "confirmed": true,
+    "name": "failed-save-switch-discards-draft-and-preview-is-stale"
+  }
+]

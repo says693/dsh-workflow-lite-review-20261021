@@ -1,0 +1,138 @@
+{
+  "src/client/app/useRuns.ts": {
+    "sha256": "d367013514a9ca547610104b1b42dfdce30fb43d7deb88ce5be74bacae3ed049",
+    "ranges": [
+      [
+        215,
+        241
+      ],
+      [
+        243,
+        260
+      ],
+      [
+        303,
+        305
+      ],
+      [
+        318,
+        360
+      ],
+      [
+        463,
+        524
+      ]
+    ],
+    "text": "215: function draftKey(id: string): string {\n216:   return `workflow-lite.run-draft.${id}`\n217: }\n218: \n219: /** 草稿存在本地：关掉实例视图或切走再回来，接着改。 */\n220: function readDraft(id: string): { edits: StateEdit[]; note: string } {\n221:   try {\n222:     const raw = window.localStorage.getItem(draftKey(id))\n223:     if (raw === null) return { edits: [], note: '' }\n224:     const parsed = JSON.parse(raw) as { edits?: unknown; note?: unknown }\n225:     return {\n226:       edits: Array.isArray(parsed.edits) ? (parsed.edits as StateEdit[]) : [],\n227:       note: typeof parsed.note === 'string' ? parsed.note : '',\n228:     }\n229:   } catch {\n230:     return { edits: [], note: '' }\n231:   }\n232: }\n233: \n234: function writeDraft(id: string, edits: StateEdit[], note: string): void {\n235:   try {\n236:     if (edits.length === 0 && note === '') window.localStorage.removeItem(draftKey(id))\n237:     else window.localStorage.setItem(draftKey(id), JSON.stringify({ edits, note }))\n238:   } catch {\n239:     // 尽力而为。\n240:   }\n241: }\n\n243: export function useRun(\n244:   rpc: WorkflowLiteRpc,\n245:   id: string,\n246:   session: string | undefined,\n247:   t: T,\n248:   onSaved?: () => void,\n249: ): Run {\n250:   const [view, setView] = useState<InstanceView | null>(null)\n251:   const [lastGood, setLastGood] = useState<RunState | null>(null)\n252:   const [draft, setDraft] = useState<StateEdit[]>(() => readDraft(id).edits)\n253:   const [note, setNote] = useState(() => readDraft(id).note)\n254:   const [notify, setNotify] = useState(true)\n255:   const [conflicts, setConflicts] = useState<DraftConflict[]>([])\n256:   const [overwritten, setOverwritten] = useState<string[][]>([])\n257:   const [saving, setSaving] = useState(false)\n258:   const [error, setError] = useState<string | null>(null)\n259:   const [toast, setToast] = useState<RunToast | null>(null)\n260:   const mtime = useRef<number | undefined>(undefined)\n\n303:   useEffect(() => {\n304:     writeDraft(id, draft, note)\n305:   }, [id, draft, note])\n\n318:     async (force: boolean): Promise<void> => {\n319:       try {\n320:         const result = await rpc.call('run/load', {\n321:           id,\n322:           ...(session === undefined ? {} : { session }),\n323:           ...(force || mtime.current === undefined ? {} : { since: mtime.current }),\n324:         })\n325:         if ('unchanged' in result) return\n326:         mtime.current = result.mtime\n327:         setView(result)\n328:         setError(null)\n329:         const state = result.state\n330:         if (state === null) return\n331:         setLastGood(state)\n332:         const rebased = rebase(draftRef.current, state)\n333:         if (rebased.draft.length !== draftRef.current.length) resetDraft(rebased.draft)\n334:         setConflicts(rebased.conflicts)\n335:         if (saved.current.length > 0) {\n336:           const reverted = saved.current.filter((edit) =>\n337:             sameValue(valueAt(state, edit.path), edit.from),\n338:           )\n339:           if (reverted.length > 0) setOverwritten(reverted.map((edit) => edit.path))\n340:         }\n341:       } catch (caught) {\n342:         setError(errorMessage(caught))\n343:       }\n344:     },\n345:     [rpc, id, session, resetDraft],\n346:   )\n347: \n348:   // 换了实例：清掉上一份的显示，读新的。\n349:   useEffect(() => {\n350:     mtime.current = undefined\n351:     saved.current = []\n352:     setView(null)\n353:     setLastGood(null)\n354:     setOverwritten([])\n355:     const stored = readDraft(id)\n356:     resetDraft(stored.edits)\n357:     setNote(stored.note)\n358:     setNotify(true)\n359:     void load(true)\n360:   }, [id, load, resetDraft])\n\n463:   const save = useCallback(\n464:     async (graph?: {\n465:       base: string\n466:       document: WorkflowDocument\n467:     }): Promise<RunSaveResponse | null> => {\n468:       if ((draftRef.current.length === 0 && graph === undefined) || saving) return null\n469:       setSaving(true)\n470:       const steps =\n471:         graph === undefined\n472:           ? null\n473:           : new Set(graph.document.nodes.filter(isStep).map((node) => node.id))\n474:       const edits =\n475:         steps === null\n476:           ? draftRef.current\n477:           : draftRef.current.filter(\n478:               (edit) => edit.path.length !== 3 || steps.has(edit.path[1] ?? ''),\n479:             )\n480:       try {\n481:         const result = await rpc.call('run/save', {\n482:           id,\n483:           ...(session === undefined ? {} : { session }),\n484:           edits,\n485:           ...(note.trim() === '' ? {} : { note: note.trim() }),\n486:           ...(graph === undefined ? {} : { graph }),\n487:           ...(notify ? {} : { notify: false }),\n488:         })\n489:         saved.current = edits\n490:         setOverwritten([])\n491:         resetDraft([])\n492:         setNote('')\n493:         setConflicts([])\n494:         flash(\n495:           'ok',\n496:           !notify\n497:             ? t('run.savedSilent')\n498:             : result.quiet === true\n499:               ? t('run.savedQuiet')\n500:               : result.notified\n501:                 ? t('run.savedNotified')\n502:                 : t('run.savedPending'),\n503:         )\n504:         await load(true)\n505:         onSaved?.()\n506:         return result\n507:       } catch (caught) {\n508:         if (\n509:           errorCode(caught) === 'conflict' &&\n510:           !(caught instanceof WorkflowLiteRpcError && caught.details.get('graph') === true)\n511:         ) {\n512:           // 有字段在开始改之后被模型改过：重新读一遍，冲突会在草稿上标出来。\n513:           await load(true)\n514:           flash('error', t('run.saveConflict'))\n515:         } else {\n516:           flash('error', errorMessage(caught))\n517:         }\n518:         return null\n519:       } finally {\n520:         setSaving(false)\n521:       }\n522:     },\n523:     [rpc, id, session, note, notify, saving, flash, t, load, onSaved, resetDraft],\n524:   )"
+  },
+  "src/client/ui/WorkflowView.tsx": {
+    "sha256": "c6abc99bd3e80f5da9967d341dfdd6209f15de9aa7af5a51621058919650380a",
+    "ranges": [
+      [
+        737,
+        762
+      ]
+    ],
+    "text": "737:       role=\"region\"\n738:       aria-label={t('tab.label')}\n739:       onKeyDown={onKeyDown}\n740:     >\n741:       <ModalHostProvider value={modalHost}>\n742:         {runId !== null ? (\n743:           <>\n744:             <RunView\n745:               t={t}\n746:               rpc={props.rpc}\n747:               session={props.session}\n748:               id={runId}\n749:               runs={runs}\n750:               workflows={wf.catalog?.workflows ?? []}\n751:               templates={wf.catalog?.templates.nodes ?? []}\n752:               loadTemplate={wf.loadTemplate}\n753:               onSaveTemplate={wf.saveTemplate}\n754:               narrow={narrow}\n755:               inspectorW={inspectorW}\n756:               panelOpen={runPanel}\n757:               onPanel={setRunPanel}\n758:               onOpenRun={openRun}\n759:               onOpenTemplate={openTemplate}\n760:               slots={slots}\n761:               reloadRef={reloadRun}\n762:               onOpenHub={() => {"
+  },
+  "src/client/ui/RunView.tsx": {
+    "sha256": "8903b1067b30386dabfaac43a43000720747c3108f74a0a3ad7d6cbf32a4288a",
+    "ranges": [
+      [
+        261,
+        268
+      ],
+      [
+        286,
+        306
+      ],
+      [
+        556,
+        567
+      ],
+      [
+        653,
+        668
+      ]
+    ],
+    "text": "261:     for (const change of graph.changes) {\n262:       if (change.object === 'step' && change.kind !== 'removed') set.add(change.id)\n263:     }\n264:     return set\n265:   }, [current.draft, graph.changes])\n266:   const showPanel = panelOpen && !narrow\n267:   const insets = { left: 0, right: showPanel ? inspectorW + GAP : 0 }\n268:   const select = graph.select\n\n286:   const decor = useMemo<RunDecor | undefined>(() => {\n287:     if (doc === null) return undefined\n288:     const onStatus = (nodeId: string, anchor: Element): void => {\n289:       if (fresh(nodeId)) {\n290:         current.flash('ok', t('run.freshStep'))\n291:         return\n292:       }\n293:       const root = anchor.closest('[data-testid=\"wl-root\"]')\n294:       if (root === null) return\n295:       const box = root.getBoundingClientRect()\n296:       const rect = anchor.getBoundingClientRect()\n297:       // 菜单贴着小标弹出，但不伸到右栏底下。\n298:       const limit = box.width - insetRight - MENU_W - GAP\n299:       setMenu({\n300:         id: nodeId,\n301:         x: Math.max(GAP, Math.min(rect.left - box.left, limit)),\n302:         y: rect.bottom - box.top + 6,\n303:         step: 'status',\n304:       })\n305:     }\n306:     if (shown === null) {\n\n556:   const save = (): void => {\n557:     const changed = graph.changes.length > 0 && graph.doc !== null && graph.basePlan !== null\n558:     void current\n559:       .save(\n560:         changed && graph.doc !== null && graph.basePlan !== null\n561:           ? { base: graph.basePlan, document: graph.doc }\n562:           : undefined,\n563:       )\n564:       .then((result) => {\n565:         if (result?.planId !== undefined) graph.commit(result.planId)\n566:       })\n567:   }\n\n653:         problems={doc === null ? null : graph.report}\n654:         onTidy={relayout}\n655:         onLocate={locate}\n656:         slots={props.slots}\n657:       />\n658: \n659:       {showPanel &&\n660:         doc !== null &&\n661:         analysis !== null &&\n662:         (mode === 'edit' && selection !== null ? (\n663:           <div className={shell.inspector}>\n664:             <Inspector\n665:               t={t}\n666:               doc={doc}\n667:               analysis={analysis}\n668:               selection={selection}"
+  },
+  "src/client/ui/RunStatusMenu.tsx": {
+    "sha256": "b2dbd5f9bee93e3d1ee8e142adb2302c13ea8d9dd5d55608e61ee58a2d57738c",
+    "ranges": [
+      [
+        37,
+        58
+      ]
+    ],
+    "text": "37:     }\n38:     window.addEventListener('pointerdown', onDown, true)\n39:     return () => window.removeEventListener('pointerdown', onDown, true)\n40:   }, [props.onClose])\n41:   useEffect(() => {\n42:     ref.current?.querySelector<HTMLElement>('button')?.focus()\n43:   }, [props.step])\n44:   return (\n45:     <div\n46:       ref={ref}\n47:       className={cx(ui.panel, run.menu, ui.stagger)}\n48:       style={{ left: props.at.x, top: props.at.y }}\n49:       role=\"menu\"\n50:       data-testid=\"wl-run-menu\"\n51:     >\n52:       {props.step === 'verdict' ? (\n53:         <>\n54:           <p className={run.menuHint}>{t('run.pickVerdict')}</p>\n55:           {props.verdicts.map((verdict) => (\n56:             <button\n57:               key={verdict}\n58:               type=\"button\""
+  },
+  "src/client/ui/RunTopBar.tsx": {
+    "sha256": "86420e872ce8d0113835318eb7cbebd193e353e6aa0cec802785854b7fb43a5a",
+    "ranges": [
+      [
+        237,
+        260
+      ]
+    ],
+    "text": "237:                 </button>\n238:               )}\n239:               {!props.narrow && (\n240:                 <>\n241:                   <span className={ui.divider} />\n242:                   <button\n243:                     type=\"button\"\n244:                     className={cx(ui.btn, ui.icon, ui.fillOn)}\n245:                     data-tip={t('run.panelToggle')}\n246:                     aria-label={t('run.panelToggle')}\n247:                     aria-pressed={props.panelOpen}\n248:                     data-on={props.panelOpen}\n249:                     data-testid=\"wl-run-panel-toggle\"\n250:                     onClick={props.onTogglePanel}\n251:                   >\n252:                     <FadeMark on={props.panelOpen}>\n253:                       <Icon name=\"panel\" size={17} />\n254:                     </FadeMark>\n255:                   </button>\n256:                   {props.nav}\n257:                 </>\n258:               )}\n259:             </div>\n260:           </>,"
+  },
+  "src/client/ui/run.module.css": {
+    "sha256": "246d2e27906f3156f943c7225924a27d62349b6345c1e0fa9f4976ca8604d6c6",
+    "ranges": [
+      [
+        411,
+        419
+      ]
+    ],
+    "text": "411: .menu {\n412:   position: absolute;\n413:   z-index: 30;\n414:   display: flex;\n415:   flex-direction: column;\n416:   width: 220px;\n417:   padding: 4px;\n418:   animation: menuIn 120ms ease-out backwards;\n419: }"
+  },
+  "src/client/ui/HubImport.tsx": {
+    "sha256": "133687b0c1dec49bc44415a61709c0b0fcd755f6837bad776ca524d4709478b3",
+    "ranges": [
+      [
+        176,
+        209
+      ],
+      [
+        231,
+        240
+      ]
+    ],
+    "text": "176:         <Preview\n177:           t={t}\n178:           preview={phase.preview}\n179:           taken={props.taken}\n180:           onCancel={cancel}\n181:           onApply={async (choice) => {\n182:             const preview = phase.preview\n183:             setError(null)\n184:             const target = choice.mode === 'merge' ? preview.name : choice.name.trim()\n185:             if (target === props.current && !(await props.flush())) {\n186:               setError(t('ver.flushFailed'))\n187:               return\n188:             }\n189:             setPhase({ kind: 'busy', text: t('pack.importing') })\n190:             try {\n191:               const result = await rpc.call(\n192:                 'pack/apply',\n193:                 applyRequest(preview, choice, props.scope),\n194:               )\n195:               pending.current = null\n196:               let text = t('pack.imported')\n197:                 .replace('{name}', result.name)\n198:                 .replace('{n}', String(result.versions.length))\n199:               if (result.duplicates.length > 0) {\n200:                 text += t('pack.importedDup').replace('{n}', String(result.duplicates.length))\n201:               }\n202:               props.onDone(result.name, text, result.name === props.current)\n203:             } catch (caught) {\n204:               setError(errorMessage(caught))\n205:               setPhase({ kind: 'preview', preview })\n206:             }\n207:           }}\n208:         />\n209:       )}\n\n231:   onCancel(): void\n232:   onApply(choice: ImportChoice): Promise<void>\n233: }): React.JSX.Element {\n234:   const { t, preview } = props\n235:   const [choice, setChoice] = useState<ImportChoice>(() => defaultImportChoice(preview))\n236:   const [trusted, setTrusted] = useState(false)\n237:   const [allAssets, setAllAssets] = useState(false)\n238:   const [openSkill, setOpenSkill] = useState<string | null>(null)\n239:   const confirm = useConfirm<HTMLButtonElement>()\n240: "
+  },
+  "src/client/model/pack.ts": {
+    "sha256": "17a1fdc9f8f0de035e579a89f095157fd50d60dcfe08174b849781b7dfe2edb3",
+    "ranges": [
+      [
+        150,
+        159
+      ]
+    ],
+    "text": "150: export function defaultImportChoice(preview: PackImportPreview): ImportChoice {\n151:   return {\n152:     mode: 'new',\n153:     name: preview.exists ? preview.suggested : preview.name,\n154:     assets: 'local',\n155:     skills: Object.fromEntries(\n156:       preview.skills.map((skill) => [skill.name, defaultSkillAction(skill)]),\n157:     ),\n158:   }\n159: }"
+  },
+  "src/host/pack/importer.ts": {
+    "sha256": "cd05c39f0cb600ec68e7e9d7d8010a48cb7333a8fd6a7a76f90a5d940aede520",
+    "ranges": [
+      [
+        478,
+        499
+      ],
+      [
+        530,
+        549
+      ]
+    ],
+    "text": "478:   const outcome = await deps.repository.importWorkflow({\n479:     mode: request.mode,\n480:     name: request.name,\n481:     versions: imported,\n482:     current: current.document,\n483:     prepare: async (name) => {\n484:       try {\n485:         // 资料目录。\n486:         const dir = assetsDir(deps.dataDir, name)\n487:         if (request.mode === 'new') await rm(dir, { recursive: true, force: true })\n488:         const keepLocal = request.assets !== 'package'\n489:         const clashes = new Set(request.mode === 'merge' ? preview.result.clashes : [])\n490:         const files = manifest.assets\n491:           .filter((file) => !(keepLocal && clashes.has(file.path)))\n492:           .map((file) => ({\n493:             path: file.path,\n494:             data: entries.get(PACK_PATHS.asset(file.path)) as Uint8Array,\n495:           }))\n496:         await writeTree(dir, files)\n497:         assetsWritten = files.length\n498: \n499:         // skill。\n\n530:   return {\n531:     ok: true,\n532:     result: {\n533:       name: outcome.result.name,\n534:       versions: outcome.result.versions,\n535:       duplicates: outcome.result.duplicates,\n536:       assets: assetsWritten,\n537:       skills: plan.map((entry) => ({ name: entry.skill.name, as: entry.as, action: entry.action })),\n538:     },\n539:   }\n540: }"
+  },
+  "src/host/store/repository.ts": {
+    "sha256": "c24cccaace43b26858dc4c3e45f4f701921273ff20d69e545ade237249a4f0cb",
+    "ranges": [
+      [
+        1226,
+        1261
+      ]
+    ],
+    "text": "1226: \n1227:       if (request.prepare !== undefined) {\n1228:         const prepared = await request.prepare(name)\n1229:         if (!prepared.ok) return prepared\n1230:       }\n1231: \n1232:       const dir = versionsDir(this.dataDir, name)\n1233:       try {\n1234:         // 新建时那个名字下可能留着没人认领的旧版本（工作流早被删了）：清掉，免得混进来。\n1235:         if (request.mode === 'new') await removeTree(dir)\n1236:         if (planned.length > 0) await ensureDir(dir)\n1237:         for (const { n, version } of planned) {\n1238:           await writeFileAtomic(\n1239:             versionFile(this.dataDir, name, n),\n1240:             versionText({\n1241:               n,\n1242:               createdAt: version.createdAt,\n1243:               note: version.note,\n1244:               document: version.document,\n1245:             }),\n1246:           )\n1247:         }\n1248:       } catch (error) {\n1249:         return mapWriteFailure(error, dir)\n1250:       }\n1251: \n1252:       const file = workflowFile(this.dataDir, name)\n1253:       const text = writeDocument(request.current)\n1254:       try {\n1255:         await writeFileAtomic(file, text)\n1256:       } catch (error) {\n1257:         return mapWriteFailure(error, file)\n1258:       }\n1259:       this.rememberBaseline(name, await hashOf(text), request.current)\n1260:       return ok({ name, versions: planned.map((entry) => entry.n), duplicates })\n1261:     })"
+  }
+}

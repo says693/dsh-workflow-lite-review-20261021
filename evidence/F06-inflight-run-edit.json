@@ -1,0 +1,324 @@
+{
+  "test": "edits-added-while-run-save-in-flight",
+  "delayedRealSuccess": true,
+  "rpc": [
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "ab02b90d-8fba-4fad-b9e7-25afbd0ac555",
+        "method": "workflow-lite/run/save",
+        "payload": {
+          "id": "20261021-161334-8928",
+          "session": "session-hero-shots",
+          "edits": [
+            {
+              "path": [
+                "nodes",
+                "start",
+                "status"
+              ],
+              "from": "pending",
+              "to": "skipped"
+            }
+          ],
+          "notify": false
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "ab02b90d-8fba-4fad-b9e7-25afbd0ac555",
+        "result": {
+          "ok": true,
+          "value": {
+            "notified": false,
+            "mtime": 1792570418137.3357,
+            "quiet": true
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "8a21a8c4-4fc1-4914-a5fc-97f7d9a5a0a3",
+        "method": "workflow-lite/run/save",
+        "payload": {
+          "id": "20261021-161334-8928",
+          "session": "session-hero-shots",
+          "edits": [
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "status"
+              ],
+              "from": "pending",
+              "to": "failed"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "round"
+              ],
+              "from": null,
+              "to": 1
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "finishedAt"
+              ],
+              "from": null,
+              "to": "2026-10-21T16:13:38.626+08:00"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "error"
+              ],
+              "from": null,
+              "to": "用户标记为失败"
+            }
+          ],
+          "notify": false
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "8a21a8c4-4fc1-4914-a5fc-97f7d9a5a0a3",
+        "result": {
+          "ok": true,
+          "value": {
+            "notified": false,
+            "mtime": 1792570418960.4514,
+            "quiet": true
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "4da61160-b814-49c5-ab81-4cc6294255c5",
+        "method": "workflow-lite/run/save",
+        "payload": {
+          "id": "20261021-161339-afd6",
+          "session": "session-hero-shots",
+          "edits": [
+            {
+              "path": [
+                "nodes",
+                "start",
+                "status"
+              ],
+              "from": "pending",
+              "to": "skipped"
+            }
+          ],
+          "notify": false
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "4da61160-b814-49c5-ab81-4cc6294255c5",
+        "result": {
+          "ok": true,
+          "value": {
+            "notified": false,
+            "mtime": 1792570423023.8167,
+            "quiet": true
+          }
+        }
+      }
+    }
+  ],
+  "control": {
+    "instance": {
+      "id": "20261021-161334-8928",
+      "workflow": "deep-inflight-control",
+      "planId": "b455a347",
+      "mode": "auto",
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+      "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161334-8928\\state.yaml",
+      "session": "session-hero-shots",
+      "createdAt": 1792570414179,
+      "current": true,
+      "status": "pending",
+      "done": 0,
+      "total": 2,
+      "updatedAt": "2026-10-21T16:13:34.169+08:00"
+    },
+    "state": {
+      "version": 1,
+      "instance": "20261021-161334-8928",
+      "workflow": "deep-inflight-control",
+      "plan": "b455a347",
+      "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161334-8928\\graph.json",
+      "mode": "auto",
+      "status": "pending",
+      "updatedAt": "2026-10-21T16:13:38.957+08:00",
+      "nodes": {
+        "start": {
+          "status": "skipped"
+        },
+        "finish": {
+          "status": "failed",
+          "round": 1,
+          "finishedAt": "2026-10-21T16:13:38.626+08:00",
+          "error": "用户标记为失败"
+        }
+      },
+      "log": [
+        {
+          "at": "2026-10-21T16:13:38.134+08:00",
+          "node": "start",
+          "event": "edit",
+          "detail": "status 从 pending 改成 skipped（这一步不再执行）",
+          "by": "user"
+        },
+        {
+          "at": "2026-10-21T16:13:38.957+08:00",
+          "node": "finish",
+          "event": "edit",
+          "round": 1,
+          "detail": "status 从 pending 改成 failed；round 写成 1；finishedAt 写成 2026-10-21T16:13:38.626+08:00；error 写成 用户标记为失败",
+          "by": "user"
+        }
+      ]
+    },
+    "savedSecondEdit": true
+  },
+  "instance": {
+    "id": "20261021-161339-afd6",
+    "workflow": "deep-inflight-state",
+    "planId": "0dea5e5c",
+    "mode": "auto",
+    "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+    "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161339-afd6\\state.yaml",
+    "session": "session-hero-shots",
+    "createdAt": 1792570419112,
+    "current": true,
+    "status": "pending",
+    "done": 0,
+    "total": 2,
+    "updatedAt": "2026-10-21T16:13:39.104+08:00"
+  },
+  "delayedRequest": {
+    "type": "client-request",
+    "rpcId": "4da61160-b814-49c5-ab81-4cc6294255c5",
+    "method": "workflow-lite/run/save",
+    "payload": {
+      "id": "20261021-161339-afd6",
+      "session": "session-hero-shots",
+      "edits": [
+        {
+          "path": [
+            "nodes",
+            "start",
+            "status"
+          ],
+          "from": "pending",
+          "to": "skipped"
+        }
+      ],
+      "notify": false
+    }
+  },
+  "realSuccess": {
+    "type": "server-response",
+    "rpcId": "4da61160-b814-49c5-ab81-4cc6294255c5",
+    "result": {
+      "ok": true,
+      "value": {
+        "notified": false,
+        "mtime": 1792570423023.8167,
+        "quiet": true
+      }
+    }
+  },
+  "draftWhileSaving": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "start",
+          "status"
+        ],
+        "from": "pending",
+        "to": "skipped"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:13:43.400+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      }
+    ],
+    "note": ""
+  },
+  "finishChipWhileSaving": "failed",
+  "saveButtonDisabled": true,
+  "draftAfterSuccess": null,
+  "finishChipAfter": "pending",
+  "diskAfter": {
+    "version": 1,
+    "instance": "20261021-161339-afd6",
+    "workflow": "deep-inflight-state",
+    "plan": "0dea5e5c",
+    "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161339-afd6\\graph.json",
+    "mode": "auto",
+    "status": "pending",
+    "updatedAt": "2026-10-21T16:13:43.022+08:00",
+    "nodes": {
+      "start": {
+        "status": "skipped"
+      },
+      "finish": {
+        "status": "pending"
+      }
+    },
+    "log": [
+      {
+        "at": "2026-10-21T16:13:43.022+08:00",
+        "node": "start",
+        "event": "edit",
+        "detail": "status 从 pending 改成 skipped（这一步不再执行）",
+        "by": "user"
+      }
+    ]
+  },
+  "confirmed": true
+}

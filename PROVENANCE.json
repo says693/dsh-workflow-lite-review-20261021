@@ -1,0 +1,551 @@
+{
+  "createdAt": "2026-10-21T08:20:18.061502+00:00",
+  "privateOriginalsPreserved": true,
+  "publicEvidenceIsRedactedCopy": true,
+  "codeFilesNotBlanketRedacted": true,
+  "originalSourceCommit": "47dc2dacca02fae36f3b9215fba535cd4a9e79a9",
+  "dependencyLockSha256": "0b88940578cfd39acafd01fffd592a4fd5795ba1a83fefef9850b67bd21202b5",
+  "redactionClasses": [
+    "review workspace absolute prefix",
+    "Windows user-home prefix",
+    "loopback port labels",
+    "pack staging tokens hashed for identity correlation",
+    "path screenshot rectangles"
+  ],
+  "files": [
+    {
+      "file": "evidence/cold-prepare-page-driver-failure.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-prepare-page-driver-failure.log",
+      "privateSha256": "de782fda491c2e8b313881645624389bb45122c6fab9b508c5f10c3a8c2b6f5e",
+      "publicSha256": "47ed2c3ff096cad0b11b60735262223ca8e78e97ba8d71c4562e0a38664ac658",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-prepare-page.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-prepare-page.mjs.log",
+      "privateSha256": "de782fda491c2e8b313881645624389bb45122c6fab9b508c5f10c3a8c2b6f5e",
+      "publicSha256": "47ed2c3ff096cad0b11b60735262223ca8e78e97ba8d71c4562e0a38664ac658",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-conflict-probe.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-conflict-probe.mjs.log",
+      "privateSha256": "52df13b43502b86df62cf77334e9092a7279ff48fd6cab47823876d6801d4b58",
+      "publicSha256": "52df13b43502b86df62cf77334e9092a7279ff48fd6cab47823876d6801d4b58",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-interaction-probes.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-interaction-probes.mjs.log",
+      "privateSha256": "ee313c94167b13bcdff4f640577ba7ed25ddf6c8a7d2adff58e62720be519401",
+      "publicSha256": "ee313c94167b13bcdff4f640577ba7ed25ddf6c8a7d2adff58e62720be519401",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-late-save-probe.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-late-save-probe.mjs.log",
+      "privateSha256": "66f4078fb5c73008185a6ee0fcaebe347f4650cdc157d4b485181708806e4cae",
+      "publicSha256": "66f4078fb5c73008185a6ee0fcaebe347f4650cdc157d4b485181708806e4cae",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-prepare-page.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-prepare-page.mjs.log",
+      "privateSha256": "328bc200111259de0253b410c730b2b2b7994617acdfe064bc7870aa3302f790",
+      "publicSha256": "1b17cb58c4b7cdc462a5a17490cfbfe47fa3d4d906688f8dbe072576d0766400",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-probe-import-failure.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-probe-import-failure.mjs.log",
+      "privateSha256": "87b15a8ba03d0a1e5c24e27a0557fff23a3e4a2f7ac66bb3211ee30bb20b3651",
+      "publicSha256": "87b15a8ba03d0a1e5c24e27a0557fff23a3e4a2f7ac66bb3211ee30bb20b3651",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-probe-inflight-run-edit.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-probe-inflight-run-edit.mjs.log",
+      "privateSha256": "9756a7c35d07f6220241e4a5e895da997e78f574331c55e808e5bf9ca6c55713",
+      "publicSha256": "9756a7c35d07f6220241e4a5e895da997e78f574331c55e808e5bf9ca6c55713",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-probe-narrow-run-panel.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-probe-narrow-run-panel.mjs.log",
+      "privateSha256": "c97b3361fe268614f8f8ee3d53a71f7921f75e7f148f99fb05fa479938fd4ee8",
+      "publicSha256": "c97b3361fe268614f8f8ee3d53a71f7921f75e7f148f99fb05fa479938fd4ee8",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-probe-run-draft-isolation.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-probe-run-draft-isolation.mjs.log",
+      "privateSha256": "3c6276e41f8e0765c8c138b693611a0995c94ae417f7695a4ab64b59f3d618ee",
+      "publicSha256": "3c6276e41f8e0765c8c138b693611a0995c94ae417f7695a4ab64b59f3d618ee",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-probe-status-menu.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-probe-status-menu.mjs.log",
+      "privateSha256": "a63aace52d0a2edf1b3eaaa0def79169d833232431cd6f70be33c31e0f122421",
+      "publicSha256": "a63aace52d0a2edf1b3eaaa0def79169d833232431cd6f70be33c31e0f122421",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/cold-r2-toolbar-probe.mjs.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/cold-r2-toolbar-probe.mjs.log",
+      "privateSha256": "b1012b3f95f7a0dd4ee9c947a8ecdd93feefecb9f87a7737aa38c325b955eb8c",
+      "publicSha256": "b1012b3f95f7a0dd4ee9c947a8ecdd93feefecb9f87a7737aa38c325b955eb8c",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/conflict-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/conflict-published.log",
+      "privateSha256": "52df13b43502b86df62cf77334e9092a7279ff48fd6cab47823876d6801d4b58",
+      "publicSha256": "52df13b43502b86df62cf77334e9092a7279ff48fd6cab47823876d6801d4b58",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F05-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F05-published.log",
+      "privateSha256": "3c6276e41f8e0765c8c138b693611a0995c94ae417f7695a4ab64b59f3d618ee",
+      "publicSha256": "3c6276e41f8e0765c8c138b693611a0995c94ae417f7695a4ab64b59f3d618ee",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F05-run-draft-isolation.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F05-run-draft-isolation.json",
+      "privateSha256": "e1f4eeebeeecbbcd488cfe4ccf59ebd9527a99f9bd05e5d9362c36bd08e5c3fb",
+      "publicSha256": "e6139564d8401fb618e849e8a3870b6e8a7b59eb0f1e409358920c1703cb2563",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F06-inflight-run-edit.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F06-inflight-run-edit.json",
+      "privateSha256": "3c8b3a904bed2ec89d8368d2c021f9e3e51c7fb36b6ba67236f1e2e58412f031",
+      "publicSha256": "9a50a2ffb2200f4d5315e10ea3d52fe49b759fe1ac33c4ac699c8a943004f2f2",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F06-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F06-published.log",
+      "privateSha256": "9756a7c35d07f6220241e4a5e895da997e78f574331c55e808e5bf9ca6c55713",
+      "publicSha256": "9756a7c35d07f6220241e4a5e895da997e78f574331c55e808e5bf9ca6c55713",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F07-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F07-published.log",
+      "privateSha256": "3ad0dfc4ba85e2166d592cc747b4f28ca4b22a0c4dbcea443caa7ab4b3a4d21c",
+      "publicSha256": "3ad0dfc4ba85e2166d592cc747b4f28ca4b22a0c4dbcea443caa7ab4b3a4d21c",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F07-status-menu.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F07-status-menu.json",
+      "privateSha256": "851fc0eab3d917b8e5c9df88d886e513ad23f5d246a792bf50f43d4489bbde75",
+      "publicSha256": "b57ce5c9b2b85ef990d413e6ae97e4455e5b26e758521b13b0e417af8b1f0f56",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F08-narrow-run-panel.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F08-narrow-run-panel.json",
+      "privateSha256": "980922e8f55cf76d13044ae6ace93db8893b283a8d7548fa366ee44fe8cd4b02",
+      "publicSha256": "c4e809d6b9484db787b76526dfcaabf20938b820733d624b93e690a4d1b0c378",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F08-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F08-published.log",
+      "privateSha256": "6c7512f471b8d5849e05eab92c0317104ea3cbf4853676d6fba25f3181147572",
+      "publicSha256": "6c7512f471b8d5849e05eab92c0317104ea3cbf4853676d6fba25f3181147572",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/F09-O01-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F09-O01-published.log",
+      "privateSha256": "ced89e4cd2abd5702363183b05daaa1eddbdd8c0f00b6f71d8b5dbf21c195fff",
+      "publicSha256": "ced89e4cd2abd5702363183b05daaa1eddbdd8c0f00b6f71d8b5dbf21c195fff",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/hub-narrow-detail.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/hub-narrow-detail.json",
+      "privateSha256": "593b3515eadb051ea193725c56ea1b29be9106d7fdd5bedcfaa808dee105fd77",
+      "publicSha256": "ed8762361ea7831a33ba914fd63c5367a5b7670be1ab03402dc15a11f621fb0f",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/interaction-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/interaction-published.log",
+      "privateSha256": "ee313c94167b13bcdff4f640577ba7ed25ddf6c8a7d2adff58e62720be519401",
+      "publicSha256": "ee313c94167b13bcdff4f640577ba7ed25ddf6c8a7d2adff58e62720be519401",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/interaction-results.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/interaction-results.json",
+      "privateSha256": "2466e212cc1ebc38c362ea776f99494addb2817c193dbccd9a0f95aeca022b5b",
+      "publicSha256": "8eedd5d94c96cdbb741bb5beb73f9466799f25d5d7e95da1100500a6d1a709a2",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/interaction-rpc-log.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/interaction-rpc-log.json",
+      "privateSha256": "8164dd23866e503b203206912f71f9bf2131ed93aff820c39c24e8333d15b1c2",
+      "publicSha256": "97700efc1869ac35a1eda8733a7b921c938d6f6830b2d9a0a1d8db3c1e86679f",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/late-save-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/late-save-published.log",
+      "privateSha256": "fefda15f64caba50b5ad508b965a316b6b329b5777c3b9415c19ba666e4d17d7",
+      "publicSha256": "fefda15f64caba50b5ad508b965a316b6b329b5777c3b9415c19ba666e4d17d7",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/late-save-results.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/late-save-results.json",
+      "privateSha256": "ccb01b90ea340148432d47c0e73d1d4589b6209f7ffc877631c1a50c3789ff40",
+      "publicSha256": "43cf62cb82c352cf572d2357918370ed4e3e06ffa5e519d28a7869e4e45eec1e",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/loaded-artifact.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/loaded-artifact.json",
+      "privateSha256": "bcc712557c4f1706d714bbee36976e61f836935d02eba37d8b654fe661d0e31a",
+      "publicSha256": "50729b51823a18ceaecf6410a4694079c87ac1db042ed5e5428cec29cf16a593",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/O01-import-partial-result.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/O01-import-partial-result.json",
+      "privateSha256": "66931bfe9d32bdf85b9535fd22ee9580fcebf720f6f5dce9b87fb373c4c9decd",
+      "publicSha256": "5034a2b912c42273a32713ff72153d624defcd77b787b1597547fae7de28de29",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/page-baseline.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/page-baseline.json",
+      "privateSha256": "aa9568e2f77d7a2723e3d05d660b0600760d4f7cdf34a472d15f47109292f2cf",
+      "publicSha256": "748010a11073c90a38f16a42435237686ffc4ee1e76966bf54416e5e67394f56",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/real-conflict-results.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/real-conflict-results.json",
+      "privateSha256": "039a50aa90f524605db63d09ca455c04eee8527e3384b8edcc35318b1e09d667",
+      "publicSha256": "a61ef7d46e47765585f66f1317df8190f47cd66d640150619de97b0942e2bf7c",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/toolbar-published.log",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/toolbar-published.log",
+      "privateSha256": "b1012b3f95f7a0dd4ee9c947a8ecdd93feefecb9f87a7737aa38c325b955eb8c",
+      "publicSha256": "b1012b3f95f7a0dd4ee9c947a8ecdd93feefecb9f87a7737aa38c325b955eb8c",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/toolbar-results.json",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/toolbar-results.json",
+      "privateSha256": "c2b7650779a0879445049536118891dfce507f17552512687c82a54c9c969e29",
+      "publicSha256": "a78bce2546f4e5a581e34bc9d68a2ef44a74d3aa08abe482f8eac637b4a9024c",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-baseline-upstream-tests-complete.log",
+      "privateSourceRelative": "evidence/upstream-tests-complete.log",
+      "privateSha256": "bba6f706d6e1caacf1c3dd645128ee6e6934b264ad5184bb353a9a12fc32c8cd",
+      "publicSha256": "d87532ad2d7cbffca97593f94832966b51bd6f92f36dbb9933266777fffe84e2",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-baseline-build-direct.log",
+      "privateSourceRelative": "evidence/build-direct.log",
+      "privateSha256": "df55be1166fefa0389328a4fdc1bbdaefc7750cf086ff56e5f7dd52fdf2919d8",
+      "publicSha256": "b24ace07f2120455947a3920bd58a37040591aa22b4f91737bf87b8d663d9df5",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-baseline-typecheck-direct.log",
+      "privateSourceRelative": "evidence/typecheck-direct.log",
+      "privateSha256": "f8ab80001822b2837de005ab3d2d6830121c618b74dd9bde40aa9815ffae02b5",
+      "publicSha256": "f8ab80001822b2837de005ab3d2d6830121c618b74dd9bde40aa9815ffae02b5",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-baseline-lint.log",
+      "privateSourceRelative": "evidence/lint.log",
+      "privateSha256": "87a6de909ec25088be06984588cc337f7573f6c81bcc85f73dcea15cf7dcabd3",
+      "publicSha256": "87a6de909ec25088be06984588cc337f7573f6c81bcc85f73dcea15cf7dcabd3",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-anchors-first-pass.json",
+      "privateSourceRelative": "evidence/source-anchors.json",
+      "privateSha256": "c39107f18c33cc77e8d5d8fbbb7078a2158084664278c8d3b044b42168e37f30",
+      "publicSha256": "9c83dccc5a1f340feb134088ffef1a3db02d846b2fe75b42da0a1490915de0c9",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "evidence/source-anchors-second-pass.json",
+      "privateSourceRelative": "deep-pass2/evidence/source-anchors.json",
+      "privateSha256": "b2cbb7accfc86f477f602681b71120ed7e6212b3c27c70c350288d42cc09bbb5",
+      "publicSha256": "6b86835094cf59f1ab6f3d26abfa36a3b40f440740db9b982ea2e0a4e5959fef",
+      "changes": "Evidence-copy only: local paths and loopback port labels; staging token values hashed. Numeric measurements and error codes retained."
+    },
+    {
+      "file": "scripts/boot-review.mjs",
+      "privateSha256": "520aa77590a36044296de18e1fb2f6bcae21b6feadbc82cc48bf51a4c2e1bb3a",
+      "publicSha256": "520aa77590a36044296de18e1fb2f6bcae21b6feadbc82cc48bf51a4c2e1bb3a",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/conflict-probe.mjs",
+      "privateSha256": "7e333c3069e49b265b11b58541fe93be802ee4cfe9e87378a1fcc8de425a1649",
+      "publicSha256": "7e333c3069e49b265b11b58541fe93be802ee4cfe9e87378a1fcc8de425a1649",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/interaction-probes.mjs",
+      "privateSha256": "be3afe5f65d7b23cf192d55b44dc2eb9e94d82931771c8623b44199de2419efc",
+      "publicSha256": "be3afe5f65d7b23cf192d55b44dc2eb9e94d82931771c8623b44199de2419efc",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/late-save-probe.mjs",
+      "privateSha256": "02e594bee035df0b0f129a9b75a1573dd5622aa362b8a5568f87f01fe482f1e7",
+      "publicSha256": "02e594bee035df0b0f129a9b75a1573dd5622aa362b8a5568f87f01fe482f1e7",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/prepare-page.mjs",
+      "privateSha256": "89ddc247fea1574d02d05eeee509d5e6c90774b5e3a1a6ba3f8422f67802cc9f",
+      "publicSha256": "89ddc247fea1574d02d05eeee509d5e6c90774b5e3a1a6ba3f8422f67802cc9f",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/probe-import-failure.mjs",
+      "privateSha256": "f3ddf17bbafc83345b60253145a52434baad18ba586925ebb8218de6d7687f2c",
+      "publicSha256": "f3ddf17bbafc83345b60253145a52434baad18ba586925ebb8218de6d7687f2c",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/probe-inflight-run-edit.mjs",
+      "privateSha256": "8d55a6aca6f60229fa727d17928a1962358187f7cad12fb0f885a4a451e9bb90",
+      "publicSha256": "8d55a6aca6f60229fa727d17928a1962358187f7cad12fb0f885a4a451e9bb90",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/probe-narrow-run-panel.mjs",
+      "privateSha256": "e0e93db1f2de220257e0058440fe91bea2db7c2b17c6385339536890972b0bfd",
+      "publicSha256": "e0e93db1f2de220257e0058440fe91bea2db7c2b17c6385339536890972b0bfd",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/probe-run-draft-isolation.mjs",
+      "privateSha256": "c0bce98ed3bd68d76688ba2ed258c9e4d05d0cecb729973f503c96427fde7ad5",
+      "publicSha256": "c0bce98ed3bd68d76688ba2ed258c9e4d05d0cecb729973f503c96427fde7ad5",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/probe-status-menu.mjs",
+      "privateSha256": "599ff77eb9ece553b74083407a0a88d568ec8f7a7aa33f8add331c540d641f33",
+      "publicSha256": "599ff77eb9ece553b74083407a0a88d568ec8f7a7aa33f8add331c540d641f33",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/review-lib.mjs",
+      "privateSha256": "403ce7246600cc065c592bb537cda1b58aea6a925b3cb0bbcd54886adc85a77b",
+      "publicSha256": "403ce7246600cc065c592bb537cda1b58aea6a925b3cb0bbcd54886adc85a77b",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/run-lib.mjs",
+      "privateSha256": "d4b49a4c8480ebeead0dff86893095b88c7bf5bf2993f5784693a27290bfbaf2",
+      "publicSha256": "d4b49a4c8480ebeead0dff86893095b88c7bf5bf2993f5784693a27290bfbaf2",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "scripts/toolbar-probe.mjs",
+      "privateSha256": "6dd7f7b0f1bcc900057db200190786ffc4ecc76763cd10ad5675c1c04f821eb8",
+      "publicSha256": "6dd7f7b0f1bcc900057db200190786ffc4ecc76763cd10ad5675c1c04f821eb8",
+      "changes": "None; actual executed parameterized driver bytes."
+    },
+    {
+      "file": "images/F01-preview-delete.png",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F01-plan-after-delete.png",
+      "privateSha256": "081eb7ebb509ebc7b3b0fcfc7d50e288ed420aaf7c5bd8bcfba6276a0495ebc1",
+      "publicSha256": "487d7a1fa5916558817772287b051546c3e97999a474e1553f9e610aebf3fe15",
+      "changes": {
+        "crop": [
+          280,
+          76,
+          1440,
+          900
+        ],
+        "pathMasksBeforeCrop": [
+          [
+            490,
+            340,
+            1260,
+            418
+          ]
+        ],
+        "allOtherPixels": "unchanged RGB crop"
+      }
+    },
+    {
+      "file": "images/F03-toolbar.png",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F03-toolbar-clipped-640x768.png",
+      "privateSha256": "2b2142daaa898518419cb1756c328f023ca40a4c6dcb3d9bb4e21d7924df39cd",
+      "publicSha256": "0cc5d20bc25252040a6295981d839ae68abd6416026b698c19f62f7dbc0e69be",
+      "changes": {
+        "crop": [
+          56,
+          76,
+          640,
+          768
+        ],
+        "pathMasksBeforeCrop": [],
+        "allOtherPixels": "unchanged RGB crop"
+      }
+    },
+    {
+      "file": "images/F05-cross-instance.png",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F05-A-draft-appears-in-B.png",
+      "privateSha256": "ea9c706c0db501afe46887fac07ebd92499246730e092012ef66b774ca5018b3",
+      "publicSha256": "4b30158f66b08e09073b6c32cf1135028c21687d703a03ed3af55477bcfe0bb3",
+      "changes": {
+        "crop": [
+          280,
+          76,
+          1440,
+          900
+        ],
+        "pathMasksBeforeCrop": [
+          [
+            1080,
+            545,
+            1426,
+            790
+          ]
+        ],
+        "allOtherPixels": "unchanged RGB crop"
+      }
+    },
+    {
+      "file": "images/F07-menu.png",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/F07-status-menu-near-bottom.png",
+      "privateSha256": "261477b727ed067051f1f84a84a60b217e6bea5ac6c8e3321aaeeab9ef733f88",
+      "publicSha256": "4ae709ea58da788d42bb7320478048fd0cd9031b09b69ad8e1c06a0663fd9b0f",
+      "changes": {
+        "crop": [
+          280,
+          76,
+          1440,
+          900
+        ],
+        "pathMasksBeforeCrop": [],
+        "allOtherPixels": "unchanged RGB crop"
+      }
+    },
+    {
+      "file": "images/F09-import-reset.png",
+      "privateSourceRelative": "publication-20261021/release-replay/evidence/O01-import-error-partially-applied.png",
+      "privateSha256": "26803c89cef979a4b53810793a8ca6d3cca121e93c370bbe4f68789f5903bb19",
+      "publicSha256": "67fefe17443f3f6be19ec03ec69f5abe45662a7110e65ed54d81cc95eb54c8db",
+      "changes": {
+        "crop": [
+          280,
+          76,
+          1440,
+          900
+        ],
+        "pathMasksBeforeCrop": [
+          [
+            642,
+            308,
+            1300,
+            376
+          ],
+          [
+            640,
+            648,
+            1300,
+            692
+          ],
+          [
+            1318,
+            592,
+            1425,
+            730
+          ]
+        ],
+        "allOtherPixels": "unchanged RGB crop"
+      }
+    },
+    {
+      "file": "evidence/archive-replay-interaction-results.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/interaction-results.json",
+      "privateSha256": "1c9f4e8d81b51db2841f7308480455a88f94ea8aae43c23d3fde54d8f289a7f0",
+      "publicSha256": "798cfd9a425b76810e8b72a9e0e55525ae3d5e369f8c595f7847e8ac55888ab0",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-real-conflict-results.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/real-conflict-results.json",
+      "privateSha256": "a017c8aa2f64c3a11051bdd903cdfdde8ce3175a126081e71c2985852e1307a9",
+      "publicSha256": "39cca397fd362315ca31e88a6f798fb2f14c4024d36f53560e5a1a8d25b182ed",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-late-save-results.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/late-save-results.json",
+      "privateSha256": "6d6816e673f3cc6955bc88329c0fa8b0691a6ff405d9fc8ceb8cfcbf25868e8e",
+      "publicSha256": "11b6b06c798240d281c64ce73dd7d2e4ee4c486e1033f3ebb404fe0008982d23",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-toolbar-results.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/toolbar-results.json",
+      "privateSha256": "c2b7650779a0879445049536118891dfce507f17552512687c82a54c9c969e29",
+      "publicSha256": "9c37ef637eded04326ca1d2a66217ec850fe24cafd2eda6828bb30a81ba9a6ee",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-F05-run-draft-isolation.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/F05-run-draft-isolation.json",
+      "privateSha256": "034bdc380ff66479b258c76fe8159c00bf8ea9c3b0ba17e2f8633f05c2dd9e7b",
+      "publicSha256": "db02cfee59653163537efe07a5459bbddf75f9dc014c485ba1166da520698344",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-F06-inflight-run-edit.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/F06-inflight-run-edit.json",
+      "privateSha256": "a4ca5eea2ca47ffe325168e5a92f7bbd3fbd4346023a5ea8f2dbeffa51c2c761",
+      "publicSha256": "4c2300bb5f2521df2278908d89c142213640d2b02a1df14e92ad225cf34897b7",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-F07-status-menu.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/F07-status-menu.json",
+      "privateSha256": "b87500253b4b97967c8bcc132f96623f5a188a1669f89c885df42a9eb86ffa53",
+      "publicSha256": "5ba6343b93ef27dfd70d4d2d28163aafe13f3d49789f75d04433ddc15d86f5f1",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-O01-import-partial-result.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/O01-import-partial-result.json",
+      "privateSha256": "ad494afa8a1c5a671420e9f9af420f84dfe5722df89ee2e1fd879823d520c92c",
+      "publicSha256": "81733057e12aca72882efd721938ad72828d77ef613d3317f377f0f9d57717bd",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    },
+    {
+      "file": "evidence/archive-replay-loaded-artifact.json",
+      "privateSourceRelative": "zip-clean-replay/scripts/evidence/loaded-artifact.json",
+      "privateSha256": "44bd35a8dba250d265d5520fb28d33643a9aad97a2f8b62e52bf674ff76ba10a",
+      "publicSha256": "bc1657f3c4f0abef338dad38aea40a2122449698a1184e299e2e798a0ff06c8b",
+      "changes": "Evidence-copy paths/loopback ports redacted; staging token values hashed."
+    }
+  ]
+}

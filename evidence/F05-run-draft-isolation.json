@@ -1,0 +1,1746 @@
+{
+  "test": "run-draft-isolation",
+  "injectedErrors": false,
+  "rpc": [
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "6b3328c6-46e6-4c88-818b-9cb9592dc555",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "6b3328c6-46e6-4c88-818b-9cb9592dc555",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.638+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "3782a825-cfd8-4fbe-8256-2538f9e09e04",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "3782a825-cfd8-4fbe-8256-2538f9e09e04",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "planId": "34adaade",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570403648,
+              "current": true,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:13:23.638+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-161323-12f3/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "plan": "34adaade",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-12f3\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:13:23.638+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570403641.8176,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "b5a8f57d-be0d-4f28-959f-994a0068913f",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "b5a8f57d-be0d-4f28-959f-994a0068913f",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.638+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "c81e7612-091c-4d55-bb06-3d4734c95b25",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots",
+          "since": 1792570403641.8176
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "c81e7612-091c-4d55-bb06-3d4734c95b25",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570403641.8176
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "3ff799e3-ecfa-4be2-a80d-ac84efc618b9",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "3ff799e3-ecfa-4be2-a80d-ac84efc618b9",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.638+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "3866782a-229e-4b31-8282-af0f64c40fff",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots",
+          "since": 1792570403641.8176
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "3866782a-229e-4b31-8282-af0f64c40fff",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570403641.8176
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "f39dd8d9-2460-49f5-9fbc-e5dea59c6ccd",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-4628",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "f39dd8d9-2460-49f5-9fbc-e5dea59c6ccd",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-161323-4628",
+              "workflow": "deep-draft-A",
+              "planId": "70ca47e6",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570403547,
+              "current": false,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:13:23.531+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-161323-4628/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-161323-4628",
+              "workflow": "deep-draft-A",
+              "plan": "70ca47e6",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-4628\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:13:23.531+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570403540.5586,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "65280157-3769-462a-95d7-41846e5892b5",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-4628",
+          "session": "session-hero-shots",
+          "since": 1792570403540.5586
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "65280157-3769-462a-95d7-41846e5892b5",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570403540.5586
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "99b0b637-72f1-485f-9306-3f1df335afb5",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "99b0b637-72f1-485f-9306-3f1df335afb5",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.638+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "58575f42-d353-471e-a1cb-81474bdc8b9d",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "58575f42-d353-471e-a1cb-81474bdc8b9d",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "planId": "34adaade",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570403648,
+              "current": true,
+              "status": "pending",
+              "done": 0,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:13:23.638+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-161323-12f3/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "plan": "34adaade",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-12f3\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:13:23.638+08:00",
+              "nodes": {
+                "start": {
+                  "status": "pending"
+                },
+                "finish": {
+                  "status": "pending"
+                }
+              },
+              "log": []
+            },
+            "issues": [],
+            "mtime": 1792570403641.8176,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "d904c895-1b94-41f1-8dd1-9db0a7c00c79",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "d904c895-1b94-41f1-8dd1-9db0a7c00c79",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.638+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/save",
+      "request": {
+        "type": "client-request",
+        "rpcId": "d31448ad-f0e0-48e6-bb49-231e997e9a8c",
+        "method": "workflow-lite/run/save",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots",
+          "edits": [
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "status"
+              ],
+              "from": "pending",
+              "to": "failed"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "round"
+              ],
+              "from": null,
+              "to": 1
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "finishedAt"
+              ],
+              "from": null,
+              "to": "2026-10-21T16:13:27.322+08:00"
+            },
+            {
+              "path": [
+                "nodes",
+                "finish",
+                "error"
+              ],
+              "from": null,
+              "to": "用户标记为失败"
+            },
+            {
+              "path": [
+                "nodes",
+                "start",
+                "status"
+              ],
+              "from": "pending",
+              "to": "skipped"
+            }
+          ],
+          "note": "仅属于A的草稿说明",
+          "notify": false
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "d31448ad-f0e0-48e6-bb49-231e997e9a8c",
+        "result": {
+          "ok": true,
+          "value": {
+            "notified": false,
+            "mtime": 1792570412664.3877,
+            "quiet": true
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "c399e6c0-e854-4ae0-967c-381620d312f7",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "c399e6c0-e854-4ae0-967c-381620d312f7",
+        "result": {
+          "ok": true,
+          "value": {
+            "summary": {
+              "id": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "planId": "34adaade",
+              "mode": "auto",
+              "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+              "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+              "session": "session-hero-shots",
+              "createdAt": 1792570403648,
+              "current": true,
+              "status": "pending",
+              "done": 1,
+              "total": 2,
+              "updatedAt": "2026-10-21T16:13:32.660+08:00"
+            },
+            "document": {
+              "nodes": [
+                {
+                  "id": "start",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 180,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "初始步骤",
+                    "prompt": "请输出一句复核结果。"
+                  }
+                },
+                {
+                  "id": "finish",
+                  "type": "wfNode",
+                  "position": {
+                    "x": 600,
+                    "y": 180
+                  },
+                  "data": {
+                    "label": "复核结束",
+                    "prompt": "核对前一步并总结。"
+                  }
+                }
+              ],
+              "edges": [
+                {
+                  "id": "start->finish",
+                  "source": "start",
+                  "target": "finish",
+                  "sourceHandle": null,
+                  "targetHandle": null
+                }
+              ],
+              "viewport": {
+                "x": 0,
+                "y": 0,
+                "zoom": 1
+              },
+              "settings": {
+                "outputRoot": ".workflow-lite/runs/20261021-161323-12f3/out",
+                "runState": true
+              }
+            },
+            "state": {
+              "version": 1,
+              "instance": "20261021-161323-12f3",
+              "workflow": "deep-draft-B",
+              "plan": "34adaade",
+              "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-12f3\\graph.json",
+              "mode": "auto",
+              "status": "pending",
+              "updatedAt": "2026-10-21T16:13:32.660+08:00",
+              "nodes": {
+                "start": {
+                  "status": "skipped"
+                },
+                "finish": {
+                  "status": "failed",
+                  "round": 1,
+                  "finishedAt": "2026-10-21T16:13:27.322+08:00",
+                  "error": "用户标记为失败"
+                }
+              },
+              "log": [
+                {
+                  "at": "2026-10-21T16:13:32.660+08:00",
+                  "node": "finish",
+                  "event": "edit",
+                  "round": 1,
+                  "detail": "status 从 pending 改成 failed；round 写成 1；finishedAt 写成 2026-10-21T16:13:27.322+08:00；error 写成 用户标记为失败",
+                  "by": "user"
+                },
+                {
+                  "at": "2026-10-21T16:13:32.660+08:00",
+                  "node": "start",
+                  "event": "edit",
+                  "detail": "status 从 pending 改成 skipped（这一步不再执行）。说明：仅属于A的草稿说明",
+                  "by": "user"
+                }
+              ]
+            },
+            "issues": [],
+            "mtime": 1792570412664.3877,
+            "files": {},
+            "answers": {}
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/list",
+      "request": {
+        "type": "client-request",
+        "rpcId": "0d98f691-8bdd-485c-a4c7-2f6bda8769bc",
+        "method": "workflow-lite/run/list",
+        "payload": {
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "0d98f691-8bdd-485c-a4c7-2f6bda8769bc",
+        "result": {
+          "ok": true,
+          "value": {
+            "instances": [
+              {
+                "id": "20261021-161323-12f3",
+                "workflow": "deep-draft-B",
+                "planId": "34adaade",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403648,
+                "current": true,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:32.660+08:00"
+              },
+              {
+                "id": "20261021-161323-4628",
+                "workflow": "deep-draft-A",
+                "planId": "70ca47e6",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792570403547,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T16:13:23.531+08:00"
+              },
+              {
+                "id": "20261021-155855-9c10",
+                "workflow": "deep-narrow-panel",
+                "planId": "989b8c73",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569535339,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:55.331+08:00"
+              },
+              {
+                "id": "20261021-155850-05e0",
+                "workflow": "deep-menu-layout",
+                "planId": "1758ff08",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155850-05e0\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569530269,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:50.261+08:00"
+              },
+              {
+                "id": "20261021-155844-8013",
+                "workflow": "deep-inflight-state",
+                "planId": "87bde3c3",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155844-8013\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569524359,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:47.982+08:00"
+              },
+              {
+                "id": "20261021-155839-f8c4",
+                "workflow": "deep-inflight-control",
+                "planId": "03adc83d",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155839-f8c4\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569519777,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:44.217+08:00"
+              },
+              {
+                "id": "20261021-155829-3c01",
+                "workflow": "deep-draft-B",
+                "planId": "fe8763bc",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-3c01\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509931,
+                "current": false,
+                "status": "pending",
+                "done": 1,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:38.286+08:00"
+              },
+              {
+                "id": "20261021-155829-9b85",
+                "workflow": "deep-draft-A",
+                "planId": "0813cb85",
+                "mode": "auto",
+                "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+                "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155829-9b85\\state.yaml",
+                "session": "session-hero-shots",
+                "createdAt": 1792569509837,
+                "current": false,
+                "status": "pending",
+                "done": 0,
+                "total": 2,
+                "updatedAt": "2026-10-21T15:58:29.825+08:00"
+              }
+            ],
+            "current": "20261021-161323-12f3"
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/run/load",
+      "request": {
+        "type": "client-request",
+        "rpcId": "d64ce975-5744-463e-b57a-4d534d97e0df",
+        "method": "workflow-lite/run/load",
+        "payload": {
+          "id": "20261021-161323-12f3",
+          "session": "session-hero-shots",
+          "since": 1792570412664.3877
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "d64ce975-5744-463e-b57a-4d534d97e0df",
+        "result": {
+          "ok": true,
+          "value": {
+            "unchanged": true,
+            "mtime": 1792570412664.3877
+          }
+        }
+      }
+    }
+  ],
+  "instances": {
+    "a": {
+      "id": "20261021-161323-4628",
+      "workflow": "deep-draft-A",
+      "planId": "70ca47e6",
+      "mode": "auto",
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+      "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-4628\\state.yaml",
+      "session": "session-hero-shots",
+      "createdAt": 1792570403547,
+      "current": true,
+      "status": "pending",
+      "done": 0,
+      "total": 2,
+      "updatedAt": "2026-10-21T16:13:23.531+08:00"
+    },
+    "b": {
+      "id": "20261021-161323-12f3",
+      "workflow": "deep-draft-B",
+      "planId": "34adaade",
+      "mode": "auto",
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+      "statePath": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-161323-12f3\\state.yaml",
+      "session": "session-hero-shots",
+      "createdAt": 1792570403648,
+      "current": true,
+      "status": "pending",
+      "done": 0,
+      "total": 2,
+      "updatedAt": "2026-10-21T16:13:23.638+08:00"
+    }
+  },
+  "bBefore": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:13:27.322+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      }
+    ],
+    "note": "仅属于B的草稿说明"
+  },
+  "aOnFirstOpen": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:13:27.322+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      }
+    ],
+    "note": "仅属于B的草稿说明"
+  },
+  "aBeforeSwitch": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:13:27.322+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      },
+      {
+        "path": [
+          "nodes",
+          "start",
+          "status"
+        ],
+        "from": "pending",
+        "to": "skipped"
+      }
+    ],
+    "note": "仅属于A的草稿说明"
+  },
+  "bAfterSwitch": {
+    "edits": [
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "status"
+        ],
+        "from": "pending",
+        "to": "failed"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "round"
+        ],
+        "from": null,
+        "to": 1
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "finishedAt"
+        ],
+        "from": null,
+        "to": "2026-10-21T16:13:27.322+08:00"
+      },
+      {
+        "path": [
+          "nodes",
+          "finish",
+          "error"
+        ],
+        "from": null,
+        "to": "用户标记为失败"
+      },
+      {
+        "path": [
+          "nodes",
+          "start",
+          "status"
+        ],
+        "from": "pending",
+        "to": "skipped"
+      }
+    ],
+    "note": "仅属于A的草稿说明"
+  },
+  "noteInB": "仅属于A的草稿说明",
+  "bStateBefore": {
+    "version": 1,
+    "instance": "20261021-161323-12f3",
+    "workflow": "deep-draft-B",
+    "plan": "34adaade",
+    "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-12f3\\graph.json",
+    "mode": "auto",
+    "status": "pending",
+    "updatedAt": "2026-10-21T16:13:23.638+08:00",
+    "nodes": {
+      "start": {
+        "status": "pending"
+      },
+      "finish": {
+        "status": "pending"
+      }
+    },
+    "log": []
+  },
+  "bStateAfter": {
+    "version": 1,
+    "instance": "20261021-161323-12f3",
+    "workflow": "deep-draft-B",
+    "plan": "34adaade",
+    "graph": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\runs\\20261021-161323-12f3\\graph.json",
+    "mode": "auto",
+    "status": "pending",
+    "updatedAt": "2026-10-21T16:13:32.660+08:00",
+    "nodes": {
+      "start": {
+        "status": "skipped"
+      },
+      "finish": {
+        "status": "failed",
+        "round": 1,
+        "finishedAt": "2026-10-21T16:13:27.322+08:00",
+        "error": "用户标记为失败"
+      }
+    },
+    "log": [
+      {
+        "at": "2026-10-21T16:13:32.660+08:00",
+        "node": "finish",
+        "event": "edit",
+        "round": 1,
+        "detail": "status 从 pending 改成 failed；round 写成 1；finishedAt 写成 2026-10-21T16:13:27.322+08:00；error 写成 用户标记为失败",
+        "by": "user"
+      },
+      {
+        "at": "2026-10-21T16:13:32.660+08:00",
+        "node": "start",
+        "event": "edit",
+        "detail": "status 从 pending 改成 skipped（这一步不再执行）。说明：仅属于A的草稿说明",
+        "by": "user"
+      }
+    ]
+  },
+  "chipBeforeSave": "skipped",
+  "confirmed": true
+}

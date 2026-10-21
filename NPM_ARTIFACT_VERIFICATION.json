@@ -1,0 +1,27 @@
+{
+  "checkedAt": "2026-10-21T07:53:53.300184+00:00",
+  "name": "@xiaoso/dsh-workflow-lite",
+  "version": "0.6.0",
+  "gitHead": "e65bab9ae654e4a3d98a0ff7585008a1f78e3fb1",
+  "tarball": "https://registry.npmjs.org/@xiaoso/dsh-workflow-lite/-/dsh-workflow-lite-0.6.0.tgz",
+  "integrity": "sha512-AZFGCh2ybBjYnykrT+CSKmFXS++WNMSvEdAQ99GdDd29bPJBAe7nTp3rgXWYS15sibzTCG5XLrmbWKNLchv+Pg==",
+  "tarballSha256": "dd0fba388faef7a2eb682cc2e63343eb11f05ea083af8123c9b553d367d85d79",
+  "integrityVerified": true,
+  "files": {
+    "lib/client.js": {
+      "publishedSha256": "20aeb3b12a0910261850eeda89133355ff2167e63dc223d17f4a489744657913",
+      "testedBuiltSha256": "92a69688523e513e3671a54839499566b1546bf0c7356b793f72f1361c22b0c2",
+      "byteIdentical": false
+    },
+    "lib/index.mjs": {
+      "publishedSha256": "d48179b6893b565d44fcba6337b581357d82ab057cc628608d6bfee0f49a1336",
+      "testedBuiltSha256": "d48179b6893b565d44fcba6337b581357d82ab057cc628608d6bfee0f49a1336",
+      "byteIdentical": true
+    },
+    "package.json": {
+      "publishedSha256": "526884268a361ba954109042cbc0842b00b383d8c7b9dcc6a451bc17cc0caee6",
+      "testedBuiltSha256": "ee08ab7307b09177581e545f11bef78a7fd2495b29cb289de0e4b85c42f6f22d",
+      "byteIdentical": false
+    }
+  }
+}

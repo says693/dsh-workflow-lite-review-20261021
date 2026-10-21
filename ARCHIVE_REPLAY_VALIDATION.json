@@ -1,0 +1,32 @@
+{
+  "checkedAt": "2026-10-21T08:24:19.625389+00:00",
+  "testedArchiveSha256": "1cf6ec3995da0fea5a396773889f9a1f9411316dfd57eacb9fe693d1405e5a2a",
+  "freshExtractionAndHashesVerified": true,
+  "realHostReplayCompleted": true,
+  "findings": {
+    "F01": true,
+    "F02": true,
+    "F03": true,
+    "F04": true,
+    "F05": true,
+    "F06": true,
+    "F07": true,
+    "F09": true
+  },
+  "executedScriptHashes": {
+    "boot-review.mjs": "520aa77590a36044296de18e1fb2f6bcae21b6feadbc82cc48bf51a4c2e1bb3a",
+    "conflict-probe.mjs": "7e333c3069e49b265b11b58541fe93be802ee4cfe9e87378a1fcc8de425a1649",
+    "interaction-probes.mjs": "be3afe5f65d7b23cf192d55b44dc2eb9e94d82931771c8623b44199de2419efc",
+    "late-save-probe.mjs": "02e594bee035df0b0f129a9b75a1573dd5622aa362b8a5568f87f01fe482f1e7",
+    "prepare-page.mjs": "89ddc247fea1574d02d05eeee509d5e6c90774b5e3a1a6ba3f8422f67802cc9f",
+    "probe-import-failure.mjs": "f3ddf17bbafc83345b60253145a52434baad18ba586925ebb8218de6d7687f2c",
+    "probe-inflight-run-edit.mjs": "8d55a6aca6f60229fa727d17928a1962358187f7cad12fb0f885a4a451e9bb90",
+    "probe-narrow-run-panel.mjs": "e0e93db1f2de220257e0058440fe91bea2db7c2b17c6385339536890972b0bfd",
+    "probe-run-draft-isolation.mjs": "c0bce98ed3bd68d76688ba2ed258c9e4d05d0cecb729973f503c96427fde7ad5",
+    "probe-status-menu.mjs": "599ff77eb9ece553b74083407a0a88d568ec8f7a7aa33f8add331c540d641f33",
+    "review-lib.mjs": "403ce7246600cc065c592bb537cda1b58aea6a925b3cb0bbcd54886adc85a77b",
+    "run-lib.mjs": "d4b49a4c8480ebeead0dff86893095b88c7bf5bf2993f5784693a27290bfbaf2",
+    "toolbar-probe.mjs": "6dd7f7b0f1bcc900057db200190786ffc4ecc76763cd10ad5675c1c04f821eb8"
+  },
+  "finalArchiveScope": "Final seal adds validation metadata and Git byte-preservation files; every executable driver is identical to the archive extracted and executed. Dependencies reused; not a cross-machine install."
+}

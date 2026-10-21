@@ -1,0 +1,58 @@
+
+> @xiaoso/dsh-workflow-lite@0.6.0 build
+> tsdown && node scripts/notices.mjs
+
+ℹ tsdown v0.22.14 powered by rolldown v1.2.11
+ℹ config file: <REVIEW_ROOT>\repo\tsdown.config.ts 
+ℹ entry: src/index.ts
+ℹ target: es2024
+ℹ tsconfig: tsconfig.json
+ℹ entry: src/client/index.ts
+ℹ target: node22.0.0
+ℹ tsconfig: tsconfig.json
+ℹ Build start
+ℹ [ESM] lib\index.mjs  512.73 kB │ gzip: 154.77 kB
+ℹ [ESM] 1 files, total: 512.73 kB
+✔ Build complete in 143ms
+ℹ Hint: consider adding deps.onlyBundle option to avoid unintended bundling of dependencies, or set deps.onlyBundle: false to disable this hint.
+See more at https://tsdown.dev/options/dependencies#deps-onlybundle
+Detected dependencies in bundle:
+- classcat
+- d3-dispatch
+- d3-selection
+- d3-drag
+- d3-color
+- d3-interpolate
+- d3-timer
+- d3-transition
+- d3-ease
+- d3-zoom
+- @xyflow/system
+- use-sync-external-store
+- zustand
+- @xyflow/react
+- pathe
+- elkjs
+- mdurl
+- uc.micro
+- entities
+- linkify-it
+- punycode.js
+- markdown-it
+- get-east-asian-width
+- markdown-it-cjk-friendly
+ℹ [CJS] lib\client.js      5.05 MB
+ℹ [CJS] lib\client.js.map  7.75 MB
+ℹ [CJS] 2 files, total: 12.79 MB
+node_modules\.pnpm\@xyflow+react@12.12.0_@type_97cf70161bbe26b756d15a797c21b245\node_modules\@xyflow\react\dist\esm\index.js (1:0) [MODULE_LEVEL_DIRECTIVE] The semantics of the module level directive "use client" in "node_modules/.pnpm/@xyflow+react@12.12.0_@type_97cf70161bbe26b756d15a797c21b245/node_modules/@xyflow/react/dist/esm/index.js" may not be preserved when bundling.
+   ╭─[ node_modules/.pnpm/@xyflow+react@12.12.0_@type_97cf70161bbe26b756d15a797c21b245/node_modules/@xyflow/react/dist/esm/index.js:1:1 ]
+   │
+ 1 │ "use client"
+   │ ──────┬─────  
+   │       ╰─────── module level directive may not be preserved
+   │ 
+   │ Help: For more information, see https://rolldown.rs/in-depth/directives#other-directives
+───╯
+
+✔ Build complete in 922ms
+写了 THIRD_PARTY_NOTICES.md：951 行，47.2 KiB（内容没变）

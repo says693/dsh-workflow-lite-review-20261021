@@ -1,0 +1,66 @@
+{
+  "test": "run-detail-panel-narrow-view",
+  "injectedErrors": false,
+  "cases": [
+    {
+      "width": 1440,
+      "pluginWidth": 1153,
+      "selected": null,
+      "panelCount": 0,
+      "panelToggleCount": 1,
+      "runModeCount": 1,
+      "visibleDetailText": false,
+      "testIds": [
+        "wl-run-panel",
+        "wl-panel-id",
+        "wl-run-mode",
+        "wl-run-panel-close",
+        "wl-run-step-pin",
+        "wl-run-panel-toggle"
+      ]
+    },
+    {
+      "width": 1024,
+      "pluginWidth": 737,
+      "selected": null,
+      "panelCount": 0,
+      "panelToggleCount": 0,
+      "runModeCount": 0,
+      "visibleDetailText": false,
+      "testIds": []
+    },
+    {
+      "width": 1440,
+      "pluginWidth": 1153,
+      "selected": null,
+      "panelCount": 0,
+      "panelToggleCount": 1,
+      "runModeCount": 1,
+      "visibleDetailText": false,
+      "testIds": [
+        "wl-run-panel",
+        "wl-panel-id",
+        "wl-run-mode",
+        "wl-run-panel-close",
+        "wl-run-step-pin",
+        "wl-run-panel-toggle"
+      ]
+    }
+  ],
+  "instance": {
+    "id": "20261021-155855-9c10",
+    "workflow": "deep-narrow-panel",
+    "planId": "989b8c73",
+    "mode": "auto",
+    "cwd": "H:\\CODEX\\workflow-lite-review-20261021\\publication-20261021\\release-replay\\synthetic-workspace",
+    "statePath": "H:\\CODEX\\workflow-lite-review-20261021\\publication-20261021\\release-replay\\synthetic-workspace\\.workflow-lite\\runs\\20261021-155855-9c10\\state.yaml",
+    "session": "session-hero-shots",
+    "createdAt": 1792569535339,
+    "current": true,
+    "status": "pending",
+    "done": 0,
+    "total": 2,
+    "updatedAt": "2026-10-21T15:58:55.331+08:00"
+  },
+  "confirmed": true
+}

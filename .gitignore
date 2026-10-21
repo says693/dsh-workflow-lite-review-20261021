@@ -1,0 +1,8 @@
+node_modules/
+scripts/isolated-home/
+scripts/data/
+scripts/synthetic-workspace/
+scripts/private-runtime.json
+scripts/evidence/
+scripts/STOP*
+*.local.*

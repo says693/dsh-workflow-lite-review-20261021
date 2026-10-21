@@ -1,0 +1,189 @@
+{
+  "browser": "153.0.8010.12",
+  "url": "http://127.0.0.1:<PORT>/",
+  "text": "新会话\nCtrl\n+\nAlt\n+\nN\n插件\n自动化任务\n工作区\nsynthetic-workspace\n封面夹具\n15分钟\n更多\n封面夹具\n标准模式\n对话\n轨迹\n工作流\n初始步骤\n\n请输出一句复核结果。\n\n复核结束\n\n核对前一步并总结。\n\n100%\n总是\n通过\n未通过\n自定义\n产出\n更新\n读取\n回答\n入口\n出口\n步骤库\n拖到画布上使用\n空白步骤\n从零写提示词\n⋮⋮\n资源\n文件、文件夹、网址、Skill 或一段自定义提示词，连到步骤上\n⋮⋮\n用户输入\n执行前问用户一个问题，填空或选项\n⋮⋮\n常用步骤\n侦察\n读代码，摸清现状\n⋮⋮\n实现\n按计划动手改\n⋮⋮\n审查\n独立检查，给出通过与否\n⋮⋮\n修复\n按审查结论逐条修\n⋮⋮\n汇总\n写给人看的结论\n⋮⋮\n我的步骤\n\n点上面的「＋」新建一个，或选中画布上的步骤，点「存为我的步骤」。\n\nreview-normal\n已保存\n没有问题\n执行",
+  "controls": [
+    {
+      "tag": "BUTTON",
+      "label": "缩小",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "label": "放大",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-fit",
+      "label": "看全图",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "label": "快捷键",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-legend-toggle",
+      "label": null,
+      "text": "图例"
+    },
+    {
+      "tag": "BUTTON",
+      "label": "收起步骤库",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-blank",
+      "label": null,
+      "text": "空白步骤从零写提示词⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-resource",
+      "label": null,
+      "text": "资源文件、文件夹、网址、Skill 或一段自定义提示词，连到步骤上⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-input",
+      "label": null,
+      "text": "用户输入执行前问用户一个问题，填空或选项⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-section-builtin",
+      "label": null,
+      "text": "常用步骤"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-preset-scan",
+      "label": null,
+      "text": "侦察读代码，摸清现状⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-preset-implement",
+      "label": null,
+      "text": "实现按计划动手改⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-preset-review",
+      "label": null,
+      "text": "审查独立检查，给出通过与否⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-preset-fix",
+      "label": null,
+      "text": "修复按审查结论逐条修⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-preset-report",
+      "label": null,
+      "text": "汇总写给人看的结论⋮⋮"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-section-custom",
+      "label": null,
+      "text": "我的步骤"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-lib-new",
+      "label": "新建我的步骤",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-hub-open",
+      "label": "工作流中心",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-toggle-library",
+      "label": "步骤库",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-switcher",
+      "label": null,
+      "text": "review-normal"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-status",
+      "label": null,
+      "text": "已保存"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-undo",
+      "label": "撤销",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-redo",
+      "label": "重做",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-tidy",
+      "label": "整理布局",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-versions-open",
+      "label": "版本",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-export-open",
+      "label": "导出工作流",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-settings-open",
+      "label": "工作流设置",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-issues",
+      "label": null,
+      "text": "没有问题"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-preview",
+      "label": "预览计划",
+      "text": ""
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-run-start",
+      "label": "新建会话执行",
+      "text": "执行"
+    },
+    {
+      "tag": "BUTTON",
+      "id": "wl-run-more",
+      "label": "选一个会话执行",
+      "text": ""
+    }
+  ]
+}

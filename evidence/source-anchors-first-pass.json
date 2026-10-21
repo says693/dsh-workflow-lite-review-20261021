@@ -1,0 +1,114 @@
+{
+  "src/client/ui/PlanDialog.tsx": {
+    "sha256": "6459757056e5396453b957b52fa933ca82a7c3aee0640e119a321cd6a695494b",
+    "ranges": [
+      [
+        91,
+        105
+      ]
+    ],
+    "text": "91:       <div\n92:         ref={dialogRef}\n93:         className={cx(ui.panel, css.dialog)}\n94:         role=\"dialog\"\n95:         aria-modal=\"true\"\n96:         aria-label={t('plan.title')}\n97:         tabIndex={-1}\n98:         data-testid=\"wl-plan\"\n99:         onKeyDown={(event) => {\n100:           if (event.key !== 'Escape') return\n101:           event.stopPropagation()\n102:           props.onClose()\n103:         }}\n104:       >\n105:         <header className={css.dialogHead}>"
+  },
+  "src/client/ui/WorkflowView.tsx": {
+    "sha256": "c6abc99bd3e80f5da9967d341dfdd6209f15de9aa7af5a51621058919650380a",
+    "ranges": [
+      [
+        639,
+        686
+      ]
+    ],
+    "text": "639:   const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>): void => {\n640:     if (state.phase !== 'ready' || runId !== null) return\n641:     const typing = isTyping(event.target)\n642:     const mod = event.ctrlKey || event.metaKey\n643:     const key = event.key.toLowerCase()\n644:     if (key === 'escape') {\n645:       if (typing) return\n646:       if (quick !== null) setQuick(null)\n647:       else select(null)\n648:       return\n649:     }\n650:     if (typing) return\n651:     if (mod && (key === 'z' || key === 'y')) {\n652:       event.preventDefault()\n653:       if (key === 'y' || event.shiftKey) wf.redo()\n654:       else wf.undo()\n655:       return\n656:     }\n657:     if (mod && key === 'd') {\n658:       event.preventDefault()\n659:       if (state.selection?.kind === 'node') duplicate(state.selection.id)\n660:       return\n661:     }\n662:     // 其余修饰键组合留给宿主（浏览器查找之类）。\n663:     if (mod || event.altKey) return\n664:     if (key === 'delete' || key === 'backspace') {\n665:       if (state.selection === null) return\n666:       event.preventDefault()\n667:       removeSelection()\n668:       return\n669:     }\n670:     if (key === 'f') {\n671:       event.preventDefault()\n672:       fitAll()\n673:       return\n674:     }\n675:     if (key === 'l') {\n676:       event.preventDefault()\n677:       relayout()\n678:     }\n679:   }\n680: \n681:   const doc = state.doc\n682:   // 切换工作流：加载这一小段旧图留着（压暗），新图到了再换，画布不卸载重建。\n683:   const live = state.phase === 'ready' || state.phase === 'loading'\n684:   const canvasLive =\n685:     state.phase === 'ready' && doc !== null && analysis !== null\n686:       ? { key: `${state.name ?? ''}#${state.loadSeq}`, name: state.name, doc, analysis }"
+  },
+  "src/client/app/useWorkflow.ts": {
+    "sha256": "fdec157db3aacfbf98e45862a0b66a63b75c3693da442b9c67e93c44bd2586c5",
+    "ranges": [
+      [
+        177,
+        221
+      ],
+      [
+        232,
+        264
+      ],
+      [
+        292,
+        316
+      ],
+      [
+        441,
+        461
+      ]
+    ],
+    "text": "177:     async (force = false): Promise<void> => {\n178:       const current = stateRef.current\n179:       if (current.phase !== 'ready' || current.name === null || current.doc === null) return\n180:       if (current.saving) return\n181:       // 到点再判一次：防抖期间改动可能已经被撤回去了，别空写。\n182:       if (!force && !isDirty(current)) return\n183:       const { name, rev } = current\n184:       apply({ type: 'saveStarted', rev })\n185:       try {\n186:         const result = await rpc.call('graph/save', {\n187:           name,\n188:           document: current.doc,\n189:           baseHash: current.baseHash,\n190:           ...(force ? { force: true } : {}),\n191:         })\n192:         apply({ type: 'saveDone', baseHash: result.hash })\n193:         setConflict(null)\n194:         setExternal(false)\n195:       } catch (error) {\n196:         if (errorCode(error) === 'conflict') setConflict(conflictIds(error))\n197:         apply({ type: 'saveFailed', message: errorMessage(error) })\n198:         return\n199:       }\n200:       /*\n201:        * 写完回读一次：刷新校验结果（提示词刚补上，那条问题就该消失），并让本地文档与磁盘上\n202:        * **合并后**的结果对齐。回读失败不等于保存失败，所以单独 try。\n203:        * 保存期间又来了改动就**不换文档**——否则磁盘版本会静默吃掉在途改动；那时基线哈希也\n204:        * 留着这次写回的值，不采用回读到的（它对应的文档我们没有拿）。\n205:        */\n206:       try {\n207:         const disk = await rpc.call('graph/load', { name })\n208:         const now = stateRef.current\n209:         if (now.name === name && now.phase === 'ready' && now.doc !== null) {\n210:           const adopt = now.rev === rev && !sameDocument(now.doc, disk.document)\n211:           apply({\n212:             type: 'refreshed',\n213:             problems: disk.problems,\n214:             ...(adopt ? { doc: disk.document, baseHash: disk.hash } : {}),\n215:           })\n216:         }\n217:       } catch {\n218:         // 顺手刷新而已，失败就维持本地状态。\n219:       }\n220:       if (isDirty(stateRef.current)) scheduleRef.current()\n221:     },\n\n232:   scheduleRef.current = schedule\n233: \n234:   /** 把待写的改动立刻冲掉（换图、编译、离开之前）。写不完也不无限拖住调用方。 */\n235:   const flush = useCallback(async (): Promise<void> => {\n236:     if (timer.current !== null) {\n237:       clearTimeout(timer.current)\n238:       timer.current = null\n239:     }\n240:     for (let attempt = 0; attempt < 6; attempt += 1) {\n241:       const current = stateRef.current\n242:       if (current.saving) {\n243:         await sleep(80)\n244:         continue\n245:       }\n246:       if (current.phase !== 'ready' || !isDirty(current)) return\n247:       await save()\n248:       // 写失败（冲突 / IO）就停手：反复重试只会反复失败，由顶栏的状态提示人来处理。\n249:       if (stateRef.current.saveError !== null) return\n250:     }\n251:   }, [save])\n252: \n253:   const flushSaved = useCallback(async (): Promise<boolean> => {\n254:     await flush()\n255:     const current = stateRef.current\n256:     return current.saveError === null && !current.saving && !isDirty(current)\n257:   }, [flush])\n258: \n259:   // ── 编辑 ────────────────────────────────────────────────────\n260: \n261:   const edit = useCallback(\n262:     (action: Edit): void => {\n263:       const before = stateRef.current\n264:       apply(action)\n\n292:     async (name: string): Promise<void> => {\n293:       await flush()\n294:       loadTicket.current += 1\n295:       const ticket = loadTicket.current\n296:       setConflict(null)\n297:       setExternal(false)\n298:       apply({ type: 'loading', name })\n299:       try {\n300:         const loaded = await rpc.call('graph/load', { name })\n301:         if (ticket !== loadTicket.current) return\n302:         const blocking = loaded.problems.filter((problem) => problem.level === 'save')\n303:         if (blocking.length > 0) {\n304:           // 保存级破损 ⇒ 只读：留着原文给人看，不写盘。\n305:           apply({\n306:             type: 'broken',\n307:             name: loaded.name,\n308:             message: blocking.map((problem) => problem.message).join('；'),\n309:             raw: loaded.raw ?? null,\n310:             problems: loaded.problems,\n311:           })\n312:           return\n313:         }\n314:         apply({\n315:           type: 'loaded',\n316:           name: loaded.name,\n\n441:   const keepMine = useCallback((): void => void save(true), [save])\n442: \n443:   const buildPlan = useCallback(\n444:     async (full: boolean, cwd?: string): Promise<PlanBuildResponse> => {\n445:       const name = stateRef.current.name\n446:       if (name === null) throw new Error(tRef.current('error.generic'))\n447:       // 编译读的是磁盘：先把改动写下去，预览才是\"现在这张图\"的计划。\n448:       await flush()\n449:       return rpc.call('plan/build', {\n450:         name,\n451:         ...(full ? { full: true } : {}),\n452:         ...(cwd === undefined ? {} : { cwd }),\n453:       })\n454:     },\n455:     [rpc, flush],\n456:   )\n457: \n458:   const loadTemplate = useCallback(\n459:     async (name: string): Promise<NodeData | null> => {\n460:       try {\n461:         return (await rpc.call('graph/nodeTemplate', { name })).data"
+  },
+  "src/client/model/editor.ts": {
+    "sha256": "96c5b0c0952dd44e02a68b14680e98a57094b85c57d8090af798b62ff6ad5879",
+    "ranges": [
+      [
+        704,
+        728
+      ],
+      [
+        787,
+        803
+      ]
+    ],
+    "text": "704:     }\n705:   }\n706: \n707:   switch (action.type) {\n708:     case 'loading':\n709:       return {\n710:         ...initialState,\n711:         phase: 'loading',\n712:         name: action.name,\n713:         loadSeq: state.loadSeq,\n714:         historySeq: state.historySeq,\n715:       }\n716: \n717:     case 'loaded':\n718:       // 新基线：计数与历史都从头开始（旧历史属于上一份文档）。\n719:       return {\n720:         ...initialState,\n721:         phase: 'ready',\n722:         name: action.name,\n723:         doc: action.doc,\n724:         baseHash: action.baseHash,\n725:         problems: action.problems,\n726:         loadSeq: state.loadSeq + 1,\n727:         historySeq: state.historySeq,\n728:       }\n\n787:     }\n788: \n789:     case 'saveStarted':\n790:       return { ...state, saving: true, savingRev: action.rev }\n791: \n792:     case 'saveDone':\n793:       return {\n794:         ...state,\n795:         saving: false,\n796:         savedRev: state.savingRev,\n797:         baseHash: action.baseHash,\n798:         saveError: null,\n799:       }\n800: \n801:     case 'saveFailed':\n802:       return { ...state, saving: false, saveError: action.message }\n803: "
+  },
+  "src/client/ui/topbar.module.css": {
+    "sha256": "28e7e6653ac43db50fd330c11528d7f0f3a4e7f58f59725197cd06820a94ff9c",
+    "ranges": [
+      [
+        5,
+        18
+      ],
+      [
+        40,
+        60
+      ],
+      [
+        675,
+        691
+      ]
+    ],
+    "text": "5: .bar {\n6:   display: contents;\n7: }\n8: \n9: .pill {\n10:   display: flex;\n11:   flex: none;\n12:   gap: 2px;\n13:   align-items: center;\n14:   height: 42px;\n15:   padding: 4px;\n16:   border-radius: calc(12px * var(--wl-round, 1));\n17: }\n18: \n\n40:   transform-origin: 0 50%;\n41: }\n42: \n43: /* 右边两组：切换工作流时先留着上一张的样子，压暗、点不了，加载完再亮回来。 */\n44: .right {\n45:   display: flex;\n46:   flex: none;\n47:   gap: 8px;\n48:   align-items: flex-start;\n49:   transition: opacity 280ms var(--wl-ease-out);\n50: }\n51: \n52: .right[data-busy] {\n53:   opacity: 0.45;\n54:   transition-duration: 160ms;\n55:   pointer-events: none;\n56: }\n57: \n58: .switch {\n59:   display: inline-flex;\n60:   gap: 6px;\n\n675: @container (max-width: 760px) {\n676:   .runText {\n677:     display: none;\n678:   }\n679: \n680:   .runMain {\n681:     padding: 0 2px 0 9px;\n682:   }\n683: \n684:   .switch {\n685:     max-width: 150px;\n686:   }\n687: \n688:   .status span:not(.dot) {\n689:     display: none;\n690:   }\n691: }"
+  },
+  "src/client/ui/shell.module.css": {
+    "sha256": "4bd0f6f8c1156a227c03f82f26b835457160f1d6e3a7fd6b5feb85a982aec98b",
+    "ranges": [
+      [
+        248,
+        270
+      ],
+      [
+        480,
+        495
+      ],
+      [
+        1082,
+        1100
+      ]
+    ],
+    "text": "248:   --wl-inspector-w: clamp(300px, 30cqw, 360px);\n249: \n250:   position: relative;\n251:   /*\n252:    * 宿主把视图挂在 `flex: 1 0 auto; min-height: auto` 的容器里：按内容撑高的话，外层的\n253:    * 会话滚动区会跟着滚。把 flex-basis 压到 0，让\"理想高度\"是 0，再由 flex-grow 填满。\n254:    * `height: 100%` 兜底宿主那层不是 flex 容器的情况。\n255:    */\n256:   flex: 1 1 0;\n257:   height: 100%;\n258:   min-height: 0;\n259:   overflow: hidden;\n260:   isolation: isolate;\n261:   container-type: inline-size;\n262:   background: var(--wl-canvas);\n263:   color: var(--wl-text);\n264:   font-family: var(--dsw-font-family, inherit);\n265:   font-size: var(--wl-fs-body);\n266:   line-height: 1.5;\n267:   outline: none;\n268:   -webkit-font-smoothing: antialiased;\n269: \n270:   /* 浏览器原生的东西跟着主题的强调色：勾选框、范围条、输入光标，不用系统默认的那种蓝。 */\n\n480: .top {\n481:   position: absolute;\n482:   top: var(--wl-gap);\n483:   right: var(--wl-gap);\n484:   left: var(--wl-gap);\n485:   z-index: 6;\n486:   display: flex;\n487:   gap: 8px;\n488:   align-items: flex-start;\n489:   /* 顶栏中间那段空白要能透过去点到画布。 */\n490:   pointer-events: none;\n491: }\n492: \n493: .top > * {\n494:   pointer-events: auto;\n495: }\n\n1082: @container (max-width: 760px) {\n1083:   .inspector {\n1084:     top: auto;\n1085:     right: 8px;\n1086:     left: 8px;\n1087:     width: auto;\n1088:     height: min(62%, 460px);\n1089:     animation-name: sheetIn;\n1090:   }\n1091: \n1092:   .dock,\n1093:   .root[data-library=\"closed\"] .dock {\n1094:     transform: none;\n1095:   }\n1096: \n1097:   .root[data-library=\"open\"] .dock {\n1098:     visibility: hidden;\n1099:   }\n1100: }"
+  },
+  "src/host/store/repository.ts": {
+    "sha256": "c24cccaace43b26858dc4c3e45f4f701921273ff20d69e545ade237249a4f0cb",
+    "ranges": [
+      [
+        703,
+        746
+      ]
+    ],
+    "text": "703:   private async persist(\n704:     name: string,\n705:     baseDocument: WorkflowDocument | null,\n706:     baseHash: string | null,\n707:     next: WorkflowDocument,\n708:     force: boolean,\n709:   ): Promise<\n710:     Outcome<{\n711:       hash: string\n712:       document: WorkflowDocument\n713:       diskBefore: WorkflowDocument | null\n714:       warnings: ToolWarning[]\n715:     }>\n716:   > {\n717:     const file = workflowFile(this.dataDir, name)\n718:     let text = await readFileText(file)\n719:     if (text === null) return fail('not_found', `图 ${name} 不存在`, { workflow: name })\n720:     let diskHash = await hashOf(text)\n721:     let document = cloneDocument(next)\n722:     let baseline = baseDocument\n723:     let stable = false\n724:     let attempts = 0\n725: \n726:     for (; attempts < MAX_MERGE_ATTEMPTS; attempts += 1) {\n727:       if (baseHash !== null && diskHash === baseHash && baseline !== null) {\n728:         stable = true\n729:         break\n730:       }\n731:       const theirs = readDocument(text)\n732:       if (theirs.document === null || hasLevel(theirs.problems, 'save')) {\n733:         return fail('blocked', `磁盘上的图 ${name} 有保存级问题，拒绝覆盖`, {\n734:           problems: onlyLevel(theirs.problems, 'save'),\n735:         })\n736:       }\n737:       // 基线缺失时退化为「以磁盘为基线」：本地改动照写，不误报冲突。\n738:       const merged = mergeDocuments(baseline ?? theirs.document, document, theirs.document)\n739:       if (merged.conflictIds.length > 0 && !force) {\n740:         return fail(\n741:           'conflict',\n742:           `写前比对发现以下 id 双方都改过：${merged.conflictIds.join('、')}`,\n743:           {\n744:             ids: merged.conflictIds,\n745:             baseHash,\n746:             diskHash,"
+  },
+  "src/client/ui/primitives.tsx": {
+    "sha256": "433f4c87ab15872b55cea220ce964b35b533c13977ab689c913836e84d19178b",
+    "ranges": [
+      [
+        144,
+        186
+      ]
+    ],
+    "text": "144:  * - 只有按下与松开都落在遮罩上才算点遮罩：在输入框里拖选文字、松手落在外面，不该把框关掉。\n145:  * - Tab 在框内循环；关掉后焦点还给打开它的那个按钮。\n146:  */\n147: export function Modal(props: {\n148:   label: string\n149:   onDismiss(): void\n150:   children: React.ReactNode\n151:   className?: string\n152:   testId?: string\n153: }): React.JSX.Element {\n154:   const host = useContext(ModalHost)\n155:   const ref = useRef<HTMLDivElement>(null)\n156:   const downOnScrim = useRef(false)\n157:   const scrimRef = useRef<HTMLDivElement>(null)\n158:   useSheetMotion(scrimRef, ref)\n159: \n160:   useEffect(() => {\n161:     const opener = document.activeElement instanceof HTMLElement ? document.activeElement : null\n162:     const dialog = ref.current\n163:     if (dialog !== null && !dialog.contains(document.activeElement)) dialog.focus()\n164:     return () => {\n165:       if (opener?.isConnected === true) opener.focus({ preventScroll: true })\n166:     }\n167:   }, [])\n168: \n169:   const onKeyDown = (event: React.KeyboardEvent<HTMLDivElement>): void => {\n170:     // Ctrl / ⌘ + S 留给打开它的那块（「我的步骤」在弹窗里改提示词时照样能存）。\n171:     const save = (event.ctrlKey || event.metaKey) && event.key.toLowerCase() === 's'\n172:     if (!save) event.stopPropagation()\n173:     if (event.key === 'Escape') {\n174:       event.preventDefault()\n175:       props.onDismiss()\n176:       return\n177:     }\n178:     if (event.key !== 'Tab') return\n179:     const items = [...(ref.current?.querySelectorAll<HTMLElement>(FOCUSABLE) ?? [])]\n180:     const first = items[0]\n181:     const last = items[items.length - 1]\n182:     if (first === undefined || last === undefined) return\n183:     if (event.shiftKey && document.activeElement === first) {\n184:       event.preventDefault()\n185:       last.focus()\n186:     } else if (!event.shiftKey && document.activeElement === last) {"
+  }
+}

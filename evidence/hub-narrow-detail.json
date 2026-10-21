@@ -1,0 +1,44 @@
+{
+  "rect": {
+    "x": 80,
+    "right": 529,
+    "width": 449
+  },
+  "overflowingHeaderButtons": [
+    {
+      "text": "运行实例",
+      "label": null,
+      "x": 155,
+      "right": 239,
+      "outsideDialog": false
+    },
+    {
+      "text": "工作流",
+      "label": null,
+      "x": 239,
+      "right": 323,
+      "outsideDialog": false
+    },
+    {
+      "text": "存储",
+      "label": null,
+      "x": 323,
+      "right": 407,
+      "outsideDialog": false
+    },
+    {
+      "text": "设置",
+      "label": null,
+      "x": 407,
+      "right": 491,
+      "outsideDialog": false
+    },
+    {
+      "text": "",
+      "label": "关闭",
+      "x": 505,
+      "right": 531,
+      "outsideDialog": true
+    }
+  ]
+}

@@ -1,0 +1,5 @@
+
+> @xiaoso/dsh-workflow-lite@0.6.0 lint
+> biome check .
+
+Checked 283 files in 349ms. No fixes applied.

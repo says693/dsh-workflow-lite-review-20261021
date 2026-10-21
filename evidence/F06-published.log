@@ -1,0 +1,7 @@
+{
+  "confirmed": true,
+  "finishBefore": "failed",
+  "finishAfter": "pending",
+  "diskFinish": "pending",
+  "draftAfter": null
+}

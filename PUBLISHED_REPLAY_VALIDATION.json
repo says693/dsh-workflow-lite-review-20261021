@@ -1,0 +1,23 @@
+{
+  "checkedAt": "2026-10-21T08:20:18.059726+00:00",
+  "artifact": "Official npm @xiaoso/dsh-workflow-lite@0.6.0; original lib files",
+  "confirmedFindings": {
+    "F01": true,
+    "F02": true,
+    "F03": true,
+    "F04": true,
+    "F05": true,
+    "F06": true,
+    "F07": true,
+    "F09": true
+  },
+  "observationsNotCounted": [
+    "F08",
+    "O01"
+  ],
+  "normalControls": {
+    "F04_externalPromptPreserved": true,
+    "F06_secondEditSaved": true
+  },
+  "scope": "Actual isolated web host; fixed dependencies reused; no real model effectiveness claim; original source rounds cold-reproduced. Published artifact additionally cold-reproduced."
+}

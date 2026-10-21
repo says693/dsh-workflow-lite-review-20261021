@@ -1,0 +1,8 @@
+{
+  "confirmed": true,
+  "noteInB": "仅属于A的草稿说明",
+  "bOriginalNote": "仅属于B的草稿说明",
+  "bStartBefore": "pending",
+  "bStartAfter": "skipped",
+  "bFinishAfter": "failed"
+}

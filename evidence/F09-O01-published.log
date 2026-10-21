@@ -1,0 +1,6 @@
+{
+  "partialEffectConfirmed": true,
+  "choicesResetConfirmed": true,
+  "uiError": "数据目录不可写或不可用（EPERM）：H:\\CODEX\\workflow-lite-review-20261021\\publication-20261021\\release-replay\\data\\versions\\deep-import-failure",
+  "retryNotice": "已导入「deep-import-failure-2」：新增 1 个版本"
+}

@@ -1,0 +1,195 @@
+{
+  "name": "review-real-conflict",
+  "kind": "real-host-conflict-no-response-mocking",
+  "localBefore": "初始步骤",
+  "intended": "我的冲突草稿应保留",
+  "conflictText": "磁盘上的版本和你的改动有冲突 · start\n保留我的\n用磁盘的",
+  "localAfter": "另一位编辑者保存的名称",
+  "diskAfter": {
+    "nodes": [
+      {
+        "id": "start",
+        "type": "wfNode",
+        "position": {
+          "x": 180,
+          "y": 180
+        },
+        "data": {
+          "label": "另一位编辑者保存的名称",
+          "prompt": "请输出一句复核结果。"
+        }
+      },
+      {
+        "id": "finish",
+        "type": "wfNode",
+        "position": {
+          "x": 600,
+          "y": 180
+        },
+        "data": {
+          "label": "复核结束",
+          "prompt": "核对前一步并总结。"
+        }
+      }
+    ],
+    "edges": [
+      {
+        "id": "start->finish",
+        "source": "start",
+        "target": "finish",
+        "sourceHandle": null,
+        "targetHandle": null
+      }
+    ],
+    "viewport": {
+      "x": 0,
+      "y": 0,
+      "zoom": 1
+    }
+  },
+  "saveResponses": [
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "fe6059bc-ee7d-4d40-b7c6-6fb53478bb72",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-real-conflict",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "我的冲突草稿应保留",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "fe6059bc-ee7d-4d40-b7c6-6fb53478bb72",
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "conflict",
+            "message": "写前比对发现以下 id 双方都改过：start",
+            "details": {
+              "ids": [
+                "start"
+              ],
+              "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+              "diskHash": "00bc4a94ce576178749562e33ccc0b0517e797b0cb244fde66e0dbb0bf7ebf59"
+            }
+          }
+        }
+      }
+    },
+    {
+      "request": {
+        "type": "client-request",
+        "rpcId": "1a98f53f-ea14-48f4-aa7b-7063a8d875e6",
+        "method": "workflow-lite/graph/save",
+        "payload": {
+          "name": "review-real-conflict",
+          "document": {
+            "nodes": [
+              {
+                "id": "start",
+                "type": "wfNode",
+                "position": {
+                  "x": 180,
+                  "y": 180
+                },
+                "data": {
+                  "label": "我的冲突草稿应保留",
+                  "prompt": "请输出一句复核结果。"
+                }
+              },
+              {
+                "id": "finish",
+                "type": "wfNode",
+                "position": {
+                  "x": 600,
+                  "y": 180
+                },
+                "data": {
+                  "label": "复核结束",
+                  "prompt": "核对前一步并总结。"
+                }
+              }
+            ],
+            "edges": [
+              {
+                "id": "start->finish",
+                "source": "start",
+                "target": "finish",
+                "sourceHandle": null,
+                "targetHandle": null
+              }
+            ],
+            "viewport": {
+              "x": 0,
+              "y": 0,
+              "zoom": 1
+            }
+          },
+          "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "1a98f53f-ea14-48f4-aa7b-7063a8d875e6",
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "conflict",
+            "message": "写前比对发现以下 id 双方都改过：start",
+            "details": {
+              "ids": [
+                "start"
+              ],
+              "baseHash": "c29776cca891b6278e56967636cc5d3832fabddf2479ec34ade1276d929c2f2a",
+              "diskHash": "00bc4a94ce576178749562e33ccc0b0517e797b0cb244fde66e0dbb0bf7ebf59"
+            }
+          }
+        }
+      }
+    }
+  ],
+  "confirmed": true
+}

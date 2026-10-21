@@ -1,0 +1,538 @@
+{
+  "test": "import-failure-partial-assets",
+  "failureCondition": "Review-created empty directory occupies next version file path",
+  "noSkillInstallation": true,
+  "api": [
+    {
+      "path": "/api/workflow-lite/pack/upload",
+      "request": {
+        "type": "client-request",
+        "rpcId": "f3fe7329-ef78-4244-8b66-ec2b78556c6b",
+        "method": "workflow-lite/pack/upload",
+        "payload": {
+          "offset": 0,
+          "data": "<base64 omitted: 1740 chars>"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "f3fe7329-ef78-4244-8b66-ec2b78556c6b",
+        "result": {
+          "ok": true,
+          "value": {
+            "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+            "received": 1304
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/pack/inspect",
+      "request": {
+        "type": "client-request",
+        "rpcId": "b97e5446-9205-4ffe-ae8b-5c246305ce71",
+        "method": "workflow-lite/pack/inspect",
+        "payload": {
+          "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+          "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "b97e5446-9205-4ffe-ae8b-5c246305ce71",
+        "result": {
+          "ok": true,
+          "value": {
+            "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+            "format": 1,
+            "plugin": "0.6.0",
+            "exportedAt": "2026-10-21T08:13:59.280Z",
+            "name": "deep-import-failure",
+            "current": 1,
+            "versions": [
+              {
+                "n": 1,
+                "createdAt": 1792570439261,
+                "note": "合成导入对照版本",
+                "nodeCount": 3
+              }
+            ],
+            "exists": true,
+            "unsaved": true,
+            "suggested": "deep-import-failure-3",
+            "assetsRoot": "<REVIEW_ROOT>/publication-20261021/release-replay/data/assets",
+            "assets": [
+              {
+                "path": "guide.txt",
+                "bytes": 65
+              }
+            ],
+            "clashes": [
+              "guide.txt"
+            ],
+            "skillsRoot": "<USER_HOME>/.agents/skills",
+            "skills": [],
+            "external": []
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/pack/apply",
+      "request": {
+        "type": "client-request",
+        "rpcId": "7e059cb2-496b-43d7-a238-2a36f52bc5fa",
+        "method": "workflow-lite/pack/apply",
+        "payload": {
+          "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+          "mode": "merge",
+          "name": "deep-import-failure",
+          "assets": "package",
+          "skills": {},
+          "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "7e059cb2-496b-43d7-a238-2a36f52bc5fa",
+        "result": {
+          "ok": false,
+          "error": {
+            "code": "invalid_args",
+            "message": "数据目录不可写或不可用（EPERM）：<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\versions\\deep-import-failure",
+            "details": {
+              "errno": "EPERM",
+              "path": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\versions\\deep-import-failure"
+            }
+          }
+        }
+      }
+    },
+    {
+      "path": "/api/workflow-lite/pack/apply",
+      "request": {
+        "type": "client-request",
+        "rpcId": "a4f3609f-75ae-4beb-a4f1-f0a789918d06",
+        "method": "workflow-lite/pack/apply",
+        "payload": {
+          "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+          "mode": "new",
+          "name": "deep-import-failure-3",
+          "assets": "local",
+          "skills": {},
+          "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+          "session": "session-hero-shots"
+        }
+      },
+      "response": {
+        "type": "server-response",
+        "rpcId": "a4f3609f-75ae-4beb-a4f1-f0a789918d06",
+        "result": {
+          "ok": true,
+          "value": {
+            "name": "deep-import-failure-3",
+            "versions": [
+              1
+            ],
+            "duplicates": [],
+            "assets": 1,
+            "skills": []
+          }
+        }
+      }
+    }
+  ],
+  "exported": {
+    "bytes": 1304,
+    "sha256": "b5ae3af85d49f947c1fbfffc3b29783104df2f339154c30e4cf37d347adf6da8"
+  },
+  "control": {
+    "response": {
+      "name": "deep-import-failure",
+      "versions": [
+        1
+      ],
+      "duplicates": [],
+      "assets": 1,
+      "skills": []
+    },
+    "after": {
+      "graph": {
+        "nodes": [
+          {
+            "id": "start",
+            "type": "wfNode",
+            "position": {
+              "x": 180,
+              "y": 180
+            },
+            "data": {
+              "label": "包内步骤名称",
+              "prompt": "请输出一句复核结果。"
+            }
+          },
+          {
+            "id": "finish",
+            "type": "wfNode",
+            "position": {
+              "x": 600,
+              "y": 180
+            },
+            "data": {
+              "label": "复核结束",
+              "prompt": "核对前一步并总结。"
+            }
+          },
+          {
+            "id": "reference",
+            "type": "wfResource",
+            "position": {
+              "x": 180,
+              "y": 400
+            },
+            "data": {
+              "items": [
+                {
+                  "kind": "file",
+                  "value": "{assets}/guide.txt"
+                }
+              ]
+            }
+          }
+        ],
+        "edges": [
+          {
+            "id": "start->finish",
+            "source": "start",
+            "target": "finish",
+            "sourceHandle": null,
+            "targetHandle": null
+          }
+        ],
+        "viewport": {
+          "x": 0,
+          "y": 0,
+          "zoom": 1
+        }
+      },
+      "graphHash": "e82b729e4c677a3cc5472d4900292c05d2209ee908be36a34f981d8d68726e58",
+      "text": "PACKAGE-REFERENCE: 这段资料随合成工作流一起导入。\n",
+      "assetHash": "64de81596da8720c03d085d16c9222272c0297130a1e914d002d4e294d7caada",
+      "versions": {
+        "versions": [
+          {
+            "n": 1,
+            "createdAt": 1792570439261,
+            "note": "合成导入对照版本",
+            "nodeCount": 3,
+            "current": true
+          }
+        ]
+      }
+    }
+  },
+  "before": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "start",
+          "type": "wfNode",
+          "position": {
+            "x": 180,
+            "y": 180
+          },
+          "data": {
+            "label": "当前本机步骤名称",
+            "prompt": "请输出一句复核结果。"
+          }
+        },
+        {
+          "id": "finish",
+          "type": "wfNode",
+          "position": {
+            "x": 600,
+            "y": 180
+          },
+          "data": {
+            "label": "复核结束",
+            "prompt": "核对前一步并总结。"
+          }
+        },
+        {
+          "id": "reference",
+          "type": "wfResource",
+          "position": {
+            "x": 180,
+            "y": 400
+          },
+          "data": {
+            "items": [
+              {
+                "kind": "file",
+                "value": "{assets}/guide.txt"
+              }
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "start->finish",
+          "source": "start",
+          "target": "finish",
+          "sourceHandle": null,
+          "targetHandle": null
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "graphHash": "5498792f42b1bcd1d0792ce5fbd7a252405d6014dc376353d5901bb6defcd29b",
+    "text": "LOCAL-REFERENCE: 用户本机修改，应在未成功完成的导入后核对。\n",
+    "assetHash": "6b5029c248fe1f934b1f019f3a91358a61fd223f7c4737fd00f441a57dd7707f",
+    "versions": {
+      "versions": []
+    }
+  },
+  "choiceBeforeFailure": {
+    "checked": [
+      "并入已有的",
+      "用包里的"
+    ],
+    "targetField": null
+  },
+  "uiError": "数据目录不可写或不可用（EPERM）：<REVIEW_ROOT>\\publication-20261021\\release-replay\\data\\versions\\deep-import-failure",
+  "afterFailure": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "start",
+          "type": "wfNode",
+          "position": {
+            "x": 180,
+            "y": 180
+          },
+          "data": {
+            "label": "当前本机步骤名称",
+            "prompt": "请输出一句复核结果。"
+          }
+        },
+        {
+          "id": "finish",
+          "type": "wfNode",
+          "position": {
+            "x": 600,
+            "y": 180
+          },
+          "data": {
+            "label": "复核结束",
+            "prompt": "核对前一步并总结。"
+          }
+        },
+        {
+          "id": "reference",
+          "type": "wfResource",
+          "position": {
+            "x": 180,
+            "y": 400
+          },
+          "data": {
+            "items": [
+              {
+                "kind": "file",
+                "value": "{assets}/guide.txt"
+              }
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "start->finish",
+          "source": "start",
+          "target": "finish",
+          "sourceHandle": null,
+          "targetHandle": null
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "graphHash": "5498792f42b1bcd1d0792ce5fbd7a252405d6014dc376353d5901bb6defcd29b",
+    "text": "PACKAGE-REFERENCE: 这段资料随合成工作流一起导入。\n",
+    "assetHash": "64de81596da8720c03d085d16c9222272c0297130a1e914d002d4e294d7caada",
+    "versions": {
+      "versions": []
+    }
+  },
+  "choiceAfterFailure": {
+    "checked": [
+      "另存为新名字"
+    ],
+    "targetField": "deep-import-failure-3"
+  },
+  "partialEffectConfirmed": true,
+  "retryConfirmation": "导入到「deep-import-failure-3」？\n\n写入 1 个版本、1 个资料文件，安装 0 个 skill。\n\n取消\n导入",
+  "retryNotice": "已导入「deep-import-failure-3」：新增 1 个版本",
+  "afterRetry": {
+    "graph": {
+      "nodes": [
+        {
+          "id": "start",
+          "type": "wfNode",
+          "position": {
+            "x": 180,
+            "y": 180
+          },
+          "data": {
+            "label": "当前本机步骤名称",
+            "prompt": "请输出一句复核结果。"
+          }
+        },
+        {
+          "id": "finish",
+          "type": "wfNode",
+          "position": {
+            "x": 600,
+            "y": 180
+          },
+          "data": {
+            "label": "复核结束",
+            "prompt": "核对前一步并总结。"
+          }
+        },
+        {
+          "id": "reference",
+          "type": "wfResource",
+          "position": {
+            "x": 180,
+            "y": 400
+          },
+          "data": {
+            "items": [
+              {
+                "kind": "file",
+                "value": "{assets}/guide.txt"
+              }
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "start->finish",
+          "source": "start",
+          "target": "finish",
+          "sourceHandle": null,
+          "targetHandle": null
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "graphHash": "5498792f42b1bcd1d0792ce5fbd7a252405d6014dc376353d5901bb6defcd29b",
+    "text": "PACKAGE-REFERENCE: 这段资料随合成工作流一起导入。\n",
+    "assetHash": "64de81596da8720c03d085d16c9222272c0297130a1e914d002d4e294d7caada",
+    "versions": {
+      "versions": []
+    }
+  },
+  "F09": {
+    "firstRequest": {
+      "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+      "mode": "merge",
+      "name": "deep-import-failure",
+      "assets": "package",
+      "skills": {},
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+      "session": "session-hero-shots"
+    },
+    "secondRequest": {
+      "token": "<PACK_TOKEN_SHA256:e3ef7853f30f>",
+      "mode": "new",
+      "name": "deep-import-failure-3",
+      "assets": "local",
+      "skills": {},
+      "cwd": "<REVIEW_ROOT>\\publication-20261021\\release-replay\\synthetic-workspace",
+      "session": "session-hero-shots"
+    },
+    "choicesResetConfirmed": true,
+    "confirmationChangedVisible": true
+  },
+  "retryDestination": {
+    "name": "deep-import-failure-3",
+    "document": {
+      "nodes": [
+        {
+          "id": "start",
+          "type": "wfNode",
+          "position": {
+            "x": 180,
+            "y": 180
+          },
+          "data": {
+            "label": "包内步骤名称",
+            "prompt": "请输出一句复核结果。"
+          }
+        },
+        {
+          "id": "finish",
+          "type": "wfNode",
+          "position": {
+            "x": 600,
+            "y": 180
+          },
+          "data": {
+            "label": "复核结束",
+            "prompt": "核对前一步并总结。"
+          }
+        },
+        {
+          "id": "reference",
+          "type": "wfResource",
+          "position": {
+            "x": 180,
+            "y": 400
+          },
+          "data": {
+            "items": [
+              {
+                "kind": "file",
+                "value": "{assets}/guide.txt"
+              }
+            ]
+          }
+        }
+      ],
+      "edges": [
+        {
+          "id": "start->finish",
+          "source": "start",
+          "target": "finish",
+          "sourceHandle": null,
+          "targetHandle": null
+        }
+      ],
+      "viewport": {
+        "x": 0,
+        "y": 0,
+        "zoom": 1
+      }
+    },
+    "hash": "e82b729e4c677a3cc5472d4900292c05d2209ee908be36a34f981d8d68726e58",
+    "problems": [],
+    "warnings": [],
+    "raw": "{\n  \"nodes\": [\n    {\n      \"id\": \"start\",\n      \"type\": \"wfNode\",\n      \"position\": {\n        \"x\": 180,\n        \"y\": 180\n      },\n      \"data\": {\n        \"label\": \"包内步骤名称\",\n        \"prompt\": \"请输出一句复核结果。\"\n      }\n    },\n    {\n      \"id\": \"finish\",\n      \"type\": \"wfNode\",\n      \"position\": {\n        \"x\": 600,\n        \"y\": 180\n      },\n      \"data\": {\n        \"label\": \"复核结束\",\n        \"prompt\": \"核对前一步并总结。\"\n      }\n    },\n    {\n      \"id\": \"reference\",\n      \"type\": \"wfResource\",\n      \"position\": {\n        \"x\": 180,\n        \"y\": 400\n      },\n      \"data\": {\n        \"items\": [\n          {\n            \"kind\": \"file\",\n            \"value\": \"{assets}/guide.txt\"\n          }\n        ]\n      }\n    }\n  ],\n  \"edges\": [\n    {\n      \"id\": \"start->finish\",\n      \"source\": \"start\",\n      \"target\": \"finish\",\n      \"sourceHandle\": null,\n      \"targetHandle\": null\n    }\n  ],\n  \"viewport\": {\n    \"x\": 0,\n    \"y\": 0,\n    \"zoom\": 1\n  }\n}\n"
+  }
+}

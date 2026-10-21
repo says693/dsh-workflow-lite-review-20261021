@@ -1,0 +1,11 @@
+{
+  "package": "@xiaoso/dsh-workflow-lite",
+  "version": "0.6.0",
+  "source": "Official npm tarball; lib files not modified; fixed source dependencies reused via local junction.",
+  "loadedSha256": {
+    "lib/index.mjs": "d48179b6893b565d44fcba6337b581357d82ab057cc628608d6bfee0f49a1336",
+    "lib/client.js": "20aeb3b12a0910261850eeda89133355ff2167e63dc223d17f4a489744657913"
+  },
+  "browser": "153.0.8010.12",
+  "localMockRequests": 0
+}
