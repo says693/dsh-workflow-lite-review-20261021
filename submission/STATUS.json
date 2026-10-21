@@ -1,0 +1,30 @@
+{
+  "updatedAt": "2026-10-21T08:37:37.661578+00:00",
+  "account": "says693",
+  "evidence": {
+    "url": "https://github.com/says693/dsh-workflow-lite-review-20261021",
+    "commit": "96e8f357f681a48dde22241ff858354698a86fe5",
+    "report": "https://github.com/says693/dsh-workflow-lite-review-20261021/blob/96e8f357f681a48dde22241ff858354698a86fe5/REPORT.md",
+    "release": "https://github.com/says693/dsh-workflow-lite-review-20261021/releases/tag/review-20261021-v1",
+    "archiveSha256": "54469a0e1d783050176f9c5b10cfd4d75420ca66582499f367b267cf0cf6b570",
+    "anonymousDownloadVerified": true,
+    "allGitBlobsMatchArchive": true
+  },
+  "bounty": {
+    "number": 1399,
+    "url": "https://github.com/FuRongJun-1999/dsh-bounty/issues/1399",
+    "state": "open",
+    "submitted": true,
+    "bodyAndAuthorReadback": true,
+    "anonymousReadback": true,
+    "acceptanceOrSettlement": "not inferred"
+  },
+  "reviewSite": {
+    "savedDraft": true,
+    "submitted": false,
+    "verdict": null,
+    "bodyExactReadback": true,
+    "reason": "Functional quick review; current online form requires standard capability verdict. Scope conflict retained, no forced verdict."
+  },
+  "rawHostLimitation": "raw.githubusercontent.com returned HTTP 502 twice in this environment; not counted as successful raw-host or inline-image-render verification"
+}
